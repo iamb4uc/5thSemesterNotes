@@ -1,0 +1,19 @@
+- Pre-defined/reserved words in a programming language.
+- It is meant to perform a specific function in a program.
+- They can't be changed or be used as a variable name
+	- by doing so, we are trying to assign a new meaning to the keyword, which is not allowed.
+- ***Following are the most common Java Keywords:***
+	- abstract
+	- catch
+	- do
+	- break
+	- if
+	- then
+	- while
+	- for
+	- static
+	- private
+	- public
+	- void
+	- try
+	 *etc.*

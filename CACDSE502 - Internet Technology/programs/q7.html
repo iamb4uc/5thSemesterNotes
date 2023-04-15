@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Write a JavaScript code to count the number of digits in a given number.
+    </title>
+  </head>
+
+
+  <body>
+  <script>
+    function numcount() {
+      let count = 0;
+      input = document.getElementById("numinput").value;
+      document.getElementById("output").innerHTML = input.length;
+    }
+  </script>
+  Enter the number: <input type="text" id="numinput" />
+    <input type="button" id="button" onclick="numcount()" value="Count" />
+    <h1 id="output"></h1>
+  </body>
+</html>

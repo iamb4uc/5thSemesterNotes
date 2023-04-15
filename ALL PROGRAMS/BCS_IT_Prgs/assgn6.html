@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="button" name="btn" onclick="calc()" value="Find">
+<script type="text/javascript">
+	function calc()
+	{ 
+	var n,n1,s,neg=0,pos=0,z=0;
+	n=parseInt(prompt("Enter how many numbers : "));
+	for(i=1;i<=n;i++)
+	{
+		n1=parseInt(prompt("Enter numbers : "));
+		if(n1<0)
+			neg++;
+		else if(n1>0)
+			    pos++;
+			else
+				z++;
+
+	}
+	document.write("Negative no. is "+neg+"<br>");
+	document.write("Positive no. is "+pos+"<br>");
+	document.write("Total no. of zero is "+z);
+}
+</script>
+</body>
+</html>

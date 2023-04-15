@@ -1,0 +1,32 @@
+<html>
+<body>
+
+Enter number to check<input id="n1"><br>
+
+<button type="button" onclick="check()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function check() {
+  var n,r,c;
+  c=0;
+
+  n = parseInt(document.getElementById("n1").value);
+  while(n>0)
+  {
+    c=parseInt(c+1);
+    n=parseInt(n/10);
+   }    
+  
+  
+  
+   document.getElementById("demo").innerHTML = c;
+  
+  
+    
+}
+</script>
+
+</body>
+</html> 

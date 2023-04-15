@@ -1,0 +1,3 @@
+In Java, the "final" keyword is used to indicate that a variable, method, or class cannot be overridden or modified. A variable declared as final cannot be reassigned, and a method declared as final cannot be overridden by a subclass. A class declared as final cannot be extended.
+
+The "this" keyword in Java refers to the current object, and is used to access its members (i.e. variables and methods). It can also be used to refer to the current class, when used within a static context. The this keyword is often used to resolve ambiguities between class variables and local variables with the same name, or to invoke a constructor from another constructor.

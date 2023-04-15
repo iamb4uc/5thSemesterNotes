@@ -1,0 +1,23 @@
+<html>
+<body>
+<script type="text/javascript">
+	function factorial()
+	{
+		var f,i,n;
+	n=parseInt(document.getElementById("no1").value);
+	f=1;
+	for(i=1;i<=n;i++)
+	    f=f*i;
+
+	alert("The factorial is " + f);
+	document.getElementById("demo").innerHTML="Factorial is "+f;
+	}
+
+</script>
+
+Enter any Number : <input type="text" id="no1"><br />
+
+<input type="button" value="Find Factorial" onclick="factorial()">
+<p id="demo"></p>
+</body>
+</html>

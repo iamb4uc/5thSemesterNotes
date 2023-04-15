@@ -1,0 +1,30 @@
+<html>
+<body>
+
+
+<button type="button" onclick="check()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function check() {
+  var str=[1,2,3,4,5],i,avg,s;
+  i=0;
+  s=0;
+
+  while(i<10)
+  {
+   s=s+parseInt(str[parseInt(i)]);
+   document.getElementById("demo").innerHTML = s;
+   i=i+1;
+   }  
+ //avg=parseInt(s/i); 
+   //document.getElementById("demo").innerHTML = avg;
+  
+  
+    
+}
+</script>
+
+</body>
+</html> 

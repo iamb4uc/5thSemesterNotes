@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>
+	<input type="button" name="btn1" onclick="add()" value="Addition"><p></p>
+	<input type="button" name="btn2" onclick="average()" value="Average">
+	</p>
+	<script type="text/javascript">
+		function add()
+		{
+		var s=0,i,n,n1;
+		n=parseInt(prompt("Enter how many numbers : "));
+		for(i=0;i<n;i++)
+		{
+		n1=parseInt(prompt("Enter the numbers : "));
+		if(n1==0)
+			break;
+		s=s+n1;
+			}
+			alert("The summation is"+s);
+
+		}
+
+		function average()
+		{
+			var s=0,i,n,n1;
+		n=parseInt(prompt("Enter how many numbers : "));
+		for(i=0;i<n;i++)
+		{
+		n1=parseInt(prompt("Enter the numbers : "));
+		if(n1==0)
+			break;
+		s=s+n1;
+			}
+			avg=s/(i+1);
+			alert("The average is"+avg);
+		}
+
+
+	</script>
+
+</body>
+</html>

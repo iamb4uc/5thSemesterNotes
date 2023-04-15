@@ -1,0 +1,8 @@
+- It is a class in the Java API
+	- allows programmers to read input from various sources, such as:
+		- Keyboard
+		- A file
+		- A network socket
+- A part of the `java.util` package and can be used to read primitive datatypes (*e.g.: int, double, etc.*) and strings.
+- used along with the `System.in` object (which represents the standard input stream like keyboard inputs).
+-  To use the Scanner class, you need to import the `java.util` package and create a new Scanner object.

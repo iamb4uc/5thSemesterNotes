@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>
+      Question Number 4
+    </title>
+  </head>
+
+  <body>
+    <input type="button" value="Sum and Average" onclick="average()">
+    <script>
+        function average() {
+            var sum = 0;
+            var num;
+            var x, i;
+            for (i=1; ; i++){
+                num = prompt("Enter array Element terminated by Zero: ");
+                var x = parseInt(num);
+                sum += x;
+                if (num == 0) {
+                    var av = (sum / i);
+                    document.write("Sum is: " + sum + " and " + " Average is: " + av);
+                    break;
+                }
+            }
+        }
+    </script>
+  </body>
+
+</html>

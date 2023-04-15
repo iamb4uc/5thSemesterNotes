@@ -1,0 +1,314 @@
+\chapter{Unit 3}
+\section{What is scripting language? What are the different types of scripting languages?***}
+A scripting language is a programming language for a special run-time environment that automates the execution of tasks; the tasks can alternative be executed one-by-one by a human operator. 
+
+Scripting languages are:
+\begin{enumerate}
+  \item Interpreted rather than compiled.
+  \item Used for short scripts over full computer programs.
+\end{enumerate}
+JS, Python, Ruby are all examples of scripting languages.
+
+\section{Difference between client side scripting \& server side\\scripting?***}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lll}
+\multicolumn{1}{c}{\textbf{}} & \multicolumn{1}{c}{\textbf{Client-side-scripting}}                                                                                                      & \multicolumn{1}{c}{\textbf{Server-side-scripting}}                                                                                                 \\ \cline{2-3} 
+\multicolumn{1}{l|}{1}        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Used when the users browser\\ already has the code\end{tabular}}                                         & \multicolumn{1}{l|}{Used to create dynamic pages.}                                                                                                 \\ \cline{2-3} 
+\multicolumn{1}{l|}{2}        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}The web browser executes the \\ client side scripting.\end{tabular}}                                     & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}The web server executes the server \\ side scripting\end{tabular}}                                  \\ \cline{2-3} 
+\multicolumn{1}{l|}{3}        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Cannot be used to connect to\\ the databases\end{tabular}}                                               & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Used to connect to the databases that\\ reside on the web server\end{tabular}}                      \\ \cline{2-3} 
+\multicolumn{1}{l|}{4}        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Can't access the file system that \\ resides at the web server\end{tabular}}                             & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Can access the file system residing at\\ the web server\end{tabular}}                               \\ \cline{2-3} 
+\multicolumn{1}{l|}{5}        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Response from a client-side script\\ is faster as compared to a server-\\ side script.\end{tabular}}     & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Response from a server-side script is\\ slower as compared to a client-side\\ script.\end{tabular}} \\ \cline{2-3} 
+\multicolumn{1}{l|}{6}        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Example of client-side-script are:\\ VB Script, WML Script, Python, \\ Action Script, etc.\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Example of server-side-script are:\\ ASP, JSP, ASP.net, nodejs, PHP, SSJS,\\ etc.\end{tabular}}     \\ \cline{2-3} 
+\end{tabular}%
+}
+
+\section{Write down the advantages of JS language.}
+\large{Advantages of scripting languages}
+\begin{enumerate}
+  \item \textbf{Easy to learn}:
+
+    The user can learn to code in scripting languages quickly, not much knowledge of web technology is required.
+
+  \item \textbf{Faster Editing}:
+
+    It is highly efficient with the limited number of data structures and variables to use.
+
+  \item \textbf{Interactivity}:
+
+    Helps add visualization interfaces and combinations in web pages.
+
+    Modern web pages demand the use of scripting languages to create enhanced web pages, fascinated visual description which includes background and foreground colors and so on.
+
+  \item \textbf{Functionality}:
+
+    There are different libraries which are part of different scripting languages.
+    They help in creating new applications in web browsers and are different from normal programming languages.
+\end{enumerate}
+
+\section{What is JS?  Write down the features of JS.}
+JS is a dynamic computer programming language. It is a light weight and most commonly scripting language as a part of web pages whose implementations allows client side scripts to interact with user and make dynamic pages. JS is an interpreted programming language with the first
+class functions having object-oriented capabilities.
+
+\textbf{Features of JS:}
+\begin{enumerate}
+  \item \textbf{Speed}
+
+    Since JS is able to run in real-time withing the client-side browser, it is very fast. Unless outside resources are required, JS is unhindered by network called to a backend server.
+  \item \textbf{Simplicity}
+
+    Relatively simple to learn and implement.
+  \item \textbf{Popularity}
+
+    JS is used everywhere on the web.
+  \item \textbf{Interoperability}
+
+    Plays nicely with other languages and can be used in huge variety of applications.
+  \item \textbf{Server Load}
+
+    Being client-side reduces the demand on the website server.
+\end{enumerate}
+\section{What is JS variable? How JS variable are declared?}
+JS variables are containers for string data values. JS variables can be declared with the help of `\texttt{var}' keyword.
+
+\textit{example}
+\begin{verbatim}
+  var x = 5;
+  var y = 6;
+  var z = x+y;
+\end{verbatim}
+\section{What is a JS  expression?}
+An expression is a valid unit of code that resolves to a value. There are two types of expressions: those that have side effects (such as assigning values) and those that purely evaluate.
+\section{What are the different JS operators?}
+JS operators are symbols that are used to perform operations on operands.
+\textit{example}
+\begin{verbatim}
+  var sum = 10+20;
+\end{verbatim}
+Here `+' is the arithmetic operator and `=' is the assignment operator.
+
+Different types of operators used in JS:
+\begin{enumerate}
+  \item \textbf{Arithmetic Operators}
+
+    \verb|+, -, *, /, ++, --, etc.|
+
+  \item \textbf{Comparison Operators (Relational Operators)}
+
+    \verb|==, <, >, <=, >=, !=, etc.|
+
+  \item \textbf{Bitwise Operators}
+
+    \verb+&, |, ^, ~, <<, >>, etc.+
+
+  \item \textbf{Logical Operators}
+
+    \verb+&&, ||, !, etc.+
+
+  \item \textbf{Assignment Operators}
+
+    \verb|=, +=, -=, *=, etc.|
+
+  \item \textbf{Special Operators}
+
+    \verb|new, delete, void, typeof, etc.|
+\end{enumerate}
+\section{Write a JS program to find the largest of three number.}
+\begin{lstlisting}
+<html>
+  <head>
+    <title>
+      JavaScript program to find out the biggest of given three numbers
+    </title>
+  </head>
+  <body>
+    <table>
+      <tr><td><input type="text" name="a" id="first" placeholder="Enter first number"/></td></tr>
+      <tr><td><input type="text" name="b" id="second" placeholder="Enter second number"/></td></tr>
+      <tr><td><input type="text" name="c" id="third" placeholder="Enter third number"/></td></tr>
+      <tr><td><button onclick = "biggest()">Submit</button> </td> </tr>
+    </table>
+    
+    <div id = "num"></div>
+  
+    <script type="text/javascript">
+    function biggest()
+    {
+      var a,b,c;
+      a = parseInt(document.getElementById ("first").value);
+      b = parseInt(document.getElementById ("second").value);
+      c = parseInt(document.getElementById ("third").value);
+      if(a > b && a > c)
+      {
+        document.getElementById ("num").innerHTML = a+" is the biggest number";
+      }
+      else if(b > c && b > a)
+      {
+        document.getElementById ("num").innerHTML = b+" is the biggest number";
+      }
+      else
+      {
+        document.getElementById ("num").innerHTML = c+"is the biggest number";
+      }
+    }
+    </script>
+  </body>
+</html>
+\end{lstlisting}
+\section{How to write conditional statement in JS.}
+Conditional statements are used to perform different actions based on different conditions.
+
+In JS we have the following conditional statements:
+\begin{itemize}
+  \item Use \texttt{if} to specify a block of code to be executed, if a specified condition is true
+    
+    \textit{syntax}
+    \begin{lstlisting}
+    if (condition) {
+    //  block of code to be executed if the condition is true
+    }
+    \end{lstlisting}
+  \item Use \texttt{else} to specify a block of code to be executed, if the same condition is false
+    
+    \textit{syntax}
+    \begin{lstlisting}
+    if (condition) {
+      //  block of code to be executed if the condition is true
+    } else {
+      //  block of code to be executed if the condition is false
+    }
+    \end{lstlisting}
+  \item Use \texttt{else if} to specify a new condition to test, if the first condition is false
+    
+    \textit{syntax}
+    \begin{lstlisting}
+    if (condition1) {
+      //  block of code to be executed if condition1 is true
+    } else if (condition2) {
+      //  block of code to be executed if the condition1 is false and condition2 is true
+    } else {
+      //  block of code to be executed if the condition1 is false and condition2 is false
+    }
+    \end{lstlisting}
+  \item Use \texttt{switch} to specify many alternative blocks of code to be executed
+    
+    \textit{syntax}
+    \begin{lstlisting}
+    switch(expression) {
+      case x:
+        // code block
+        break;
+      case y:
+        // code block
+        break;
+      default:
+        // code block
+    }
+    \end{lstlisting}
+\end{itemize}
+
+\section{Program: ODDEVEN***}
+\begin{lstlisting}
+<html>
+  <body>
+  Enter First Number <input id="n1"><br>
+
+  <button type = "button" onclick="oddeven()">check</button>
+  <p id="demo"></p>
+  <script language="javascript" type="text/javascript">
+  function oddeven()
+  {
+    var n;
+    n = document.getElementById("n1").value;
+    if(n%2==0)
+      document.getElementById("demo").innerHTML="the no is even";
+    else
+      document.getElementById("demo").innerHTML="the no is even";
+  }
+  </script>
+  </body>
+</html>
+\end{lstlisting}
+\section{What is event and how event are handle in JS explain with example.***}
+JS events are "things" that happen to HTML elements. When JS is used in HTML pages, JS can "react" on these events.
+\ \\
+
+\large \underline{HTML Events}\normalsize
+
+An HTML event can be something the browser does, or something a user does.
+
+Here are some examples of HTML events:
+\begin{itemize}
+  \item An HTML web page has finished loading
+  \item An HTML input field was changed
+  \item An HTML button was clicked
+\end{itemize}
+Often, when events happen, you may want to do something.
+
+JavaScript lets you execute code when events are detected.
+
+HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.
+
+With single quotes:
+\begin{lstlisting}
+<element event='some JavaScript'>
+\end{lstlisting}
+With double quotes:
+\begin{lstlisting}
+<element event="some JavaScript">
+\end{lstlisting}
+In the following example, an onclick attribute (with code), is added to a \textless button\textgreater element:
+\begin{lstlisting}
+<button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+\end{lstlisting}
+\ \\
+
+\large \underline{Common HTML events}\normalsize
+
+Here is a list of some common HTML events:
+\ \\
+
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Event}} & \multicolumn{1}{c|}{\textbf{Description}}          \\ \hline
+onchange                             & An HTML element has been changed                   \\ \hline
+onclick                              & The user clicks an HTML element                    \\ \hline
+onmouseover                          & The user moves the mouse over an HTML element      \\ \hline
+onmouseout                           & The user moves the mouse away from an HTML element \\ \hline
+onkeydown                            & The user pushes a keyboard key                     \\ \hline
+onload                               & The browser has finished loading the page          \\ \hline
+\end{tabular}%
+}
+
+\section{Write a JS program to print “Hello World” processing a button “click me”. Also include a JS function “Say hello”.***}
+\begin{lstlisting}
+<html>
+  <body>
+  <input type="button" name=btn value="Click me" onclick="sayHello()">
+  <script type="text/javascript">
+  function sayHello()
+  {
+    document.write("<h1>" + "Hello World!" + "</h1>");
+  }
+  </script>
+  </body>
+</html>
+\end{lstlisting}
+\begin{lstlisting}
+...
+...
+...
+  <script language="javascript" type="text/javascript">
+  function sayHello()
+  {
+    document.getElementById('p1').innerHTML = "Hello World";
+  }
+  </script>
+  <p id="p1"> </p>
+  </body>
+</html>
+\end{lstlisting}
+\section{Write a JS program to add two number, by taking input from HTML form.}
+\section{Write a JS program to demonstrate how form validations are perform.}
+\section{Write down the structure of a JS?}
+

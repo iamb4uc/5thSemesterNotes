@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Addition of two numbers</title>
+</head>
+<body>
+	Enter the First Number
+<input type="text" id="n1"><p>
+Enter the second number
+<input type="text" id="n2"><p>
+<input type="button" value="Calculate" onclick="add()">
+
+<script type="text/javascript">
+	function add()
+	{
+	var a,b,c;
+a=parseInt(document.getElementById('n1').value);
+b=parseInt(document.getElementById('n2').value);
+c=a+b;
+//document.write("The result is "+c);
+document.getElementById('n3').innerHTML=c;
+}
+</script>
+<p id="n3"></p>
+</body>
+</html>

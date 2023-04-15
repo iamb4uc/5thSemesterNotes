@@ -1,0 +1,19 @@
+<html>
+<body>
+<script>
+  function revstr() {
+   var revStr = "";
+   var str = document.getElementById("str").value;
+   var i = str.length;
+   for(var j=i; j>=0; j--) {
+      revStr = revStr+str.charAt(j);
+   }
+   alert("The reverse of string is "+revStr);
+}
+</script>
+<form >
+  Enter a String/Number: <input type="text" id="str" name="string" /><br />
+  <input type="submit" value="Check" onclick="revstr();"/>
+</form>
+</body>
+</html>

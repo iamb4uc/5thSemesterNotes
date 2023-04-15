@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Question Number 1
+    </title>
+  </head>
+
+
+  <body>
+  <input type="button" id="output" value="Click the button" />
+
+  <script>
+    function printtab() {
+      var out = "";
+      for (i = 5; i <= 15; i++) {
+            alert("square of " + i + " is " + i * i + " and the cube is "  + i * i * i);
+        }
+      // for(i = 5; i<=15; i++) {
+      //   out += "When i=" + i + ":\ni^2=" + i*i +"\ni^3="+ i*i*i +"\n";
+      // }
+      // alert(out)
+    }
+    document.getElementById("output").addEventListener("click", printtab);
+  </script>
+  </body>
+</html>

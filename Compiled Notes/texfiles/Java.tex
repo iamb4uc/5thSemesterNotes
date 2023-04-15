@@ -1,0 +1,581 @@
+\documentclass[a4paper, 12pt]{scrarticle}
+
+\usepackage{fullpage}
+  \linespread{1.2}
+\usepackage[sc]{mathpazo}
+\usepackage{titlesec}
+\titleformat{\part}[block]{\LARGE\scshape}{}{0em}{}
+\titleformat{\section}[block]{\Large\scshape}{}{0em}{}
+\titleformat{\subsection}[block]{\large\bfseries}{}{0em}{}
+\titleformat{\subsubsection}[block]{\bfseries}{}{0em}{}
+
+% \pagenumbering{gobble}
+
+\begin{document}
+\setcounter{tocdepth}{1}
+\tableofcontents
+\newpage
+\part{Unit 1}
+\section{What is Java?}
+Java is one of the most widely used object-oriented programming language and software platform that was built to run on billions of devices.
+
+One of the major advantages of Java was its portability i.e. the ability to run a Java file on almost every computer system without worrying about compatibility issues. It is due to the fact that once a java program is compiled, it gets converted into a byte-code which is a set of instructions for a
+virtual processor/machine called the Java Virtual Machine which then interprets those instructions into low level machine code.
+
+Due to java being inspired from C and C++, C/C++ developers find it pretty easy to learn since its syntax and other rules are similar to that of C and C++'s.
+
+
+\section{What are the features of Java}
+Java has many features and here are some of the core java features that differentiate Java from other programming language:
+
+
+\begin{enumerate}
+  \item \textsc{Portability}
+
+    Java programs are designed for portability i.e. developers don't need to rewrite their programs for every system. Java programs are compiled into byte-code which are basically sets of instructions for its Java Virtual Machine which then interprets this byte-code into low-level machine
+    code. This is why Java programs are designed to \textit{\bfseries WRITE ONCE, RUN ANYWHERE.}
+
+  \item \textsc{Robust}
+
+    Java is very secure as compared to other platform independent programming languages. This is due to the fact that java programs run inside a virtual machine called the Java Virtual Machine which handles most of the memory management, byte checking/verifying. In Java, the concept of
+    pointers have been removed since pointers are not ideal in terms of security, instead of pointers, Java uses references.
+
+    Java also provides automatic garbage collection i.e. the process of removal of unused objects from memory. It also has a better implementation mechanism. Lastly, Java provides more emphasis on compile-time error checking.
+
+  \item \textsc{Object-oriented}
+
+    Java is purely object-oriented programming language i.e. everything in Java is an object. It simplifies software development and maintenance by providing some basic rules. It is also easily extendable since it is based on the object model.
+
+  \item \textsc{Multi-threaded}
+
+    Java can use the multiple threads available in modern computers which make it possible to write programs that perform multiple processes/tasks simultaneously. Programmers can use this to make their programs more interactive while preventing them from feeling sluggish and crash during
+    heavy loads.
+
+  \item \textsc{Dynamic}
+
+    Java has support for dynamic loading of classes i.e. classes are loaded on demand. Java also supports classes from C/C++. Java supports dynamic compilation as well as automatic memory management via its built in garbage collector.
+\end{enumerate}
+
+\section{Java Virtual Machine.}
+Java Virtual machine or JVM is a runtime environment in which Java byte-code can be executed. It is a virtual machine that has its own virtual processor that helps it convert the byte code instructions into the love-level machine code. It is a sandbox that provides features such as memory management, code verification, execution and provides the runtime environment for the program. Due to it acting as a sandbox, it provies most of the security and resources a program needs.
+
+\section{Byte-code}
+These are nothing but compiled Java codes that basically are instructions for the Java Virtual Processor(JVM). These are platform independent as these code donot directly instruct the computer hardware but instead are interpreted by the Java Virtual Machine and then converted into low-level machine
+code.
+
+\section{Java Development Kit}
+JDK or Java Development Kit is a collection of tools and utilities that are crucial for the development of a Java program. It provides all the packages, tools required by a programmer to write and execute a Java program. Some of its contents are:
+\begin{enumerate}
+  \item Appletviewer
+  \item Java C (Java Compiler)
+  \item Java D (Java Disassembler)
+  \item jdb (Java Debugger)
+  \item Java (Java interpreter)
+\end{enumerate}
+and many more\dots
+
+Without the Java Development Kit, we cannot write code, compile or even execute a Java Program. In other words, it provides the foundation of an environment capable of creating and executing Java programs.
+
+\section{Java Runtime Environment}
+Java Runtime Environment or JRE are a set of software/tools that a Java Program needs to run properly. JRE is the underlying technology that communicates between the program and the operating system. It acts as a translator and facilitator, and provides all the resources so that once we write a Java
+program, it runs on any operating system without further modification.
+
+\section{Variable}
+Variables are containers that hold values while a program is getting executed. Variable are always assigned with a data type.
+
+\textit{Example of a variable:}
+\verb|int data = 50;|
+
+In Java, there are three types of variables. These are:
+
+\subsection{Local Variable}
+Local variable are those variable that are defined within a block or a method or a constructor.
+
+\subsection{Instance Variable}
+Instance variable are those variables that declared inside a class but outside the body of the method.
+
+\subsection{Static Variable}
+These are those variables that are declared as static.
+
+\section{How variables are declared in Java}
+\begin{verbatim}
+public class variable {
+  int a = 21; // instance variable
+  static int b = 23; // static variable 
+  public static void main(String[] args) {
+    variable obj = new variable();
+
+    int a = 29; // local variable
+
+    System.out.println(a);
+    System.out.println(obj.a);
+    System.out.println(b);
+  }
+}
+\end{verbatim}
+
+\section{Constants}
+Constants are basically variables whose value are fixed. In other words, these are the variables that are not able to change after being assigned one.
+
+Java does not support constants directly. To declare a variable as a constant in Java, we use the \verb+static+ and \verb+final+ modifiers.
+
+SYNTAX
+
+\verb+static final constant_name = value;+
+
+
+\section{Java Keyword}
+Java Keywords are pre-defined, reserved words which are used for specific internal processes or represent some internal actions. In a Java program, these keywords are prohibited to be used as a variable name or object name.
+
+Java contains many keywords. Some of the most popular keywords are as follows:
+\begin{enumerate}
+  \item abstract
+  \item for
+  \item if
+  \item while
+  \item else
+  \item do
+  \item final
+  \item static
+  \item void
+  \item public
+\end{enumerate}
+
+and many more\dots
+
+\section{Final Keyword}
+Final keyword is used to indicate that a variable, method, or a class cannot be overridden i.e. modified after it has been declared.
+
+-- Variable declared as final cannot be reassigned.
+
+-- Methods declared as finals cannot be overridden by a subclass.
+
+-- Class declared as final cannot be extended.
+
+\section{Why is Java called both compiled and an interpreted language?}
+Though a Java program need to be compiled using \verb+javac+ (Java Compiler). Java can still be called both compiled and an interpreted language. When we compile a Java program, it gets converted into a binary byte-code which basically is a file containing instructions. This binary byte-code can
+then be interpreted by the Java Virtual Machine which acts as a software-based interpreter.
+
+\section{Which C++ features that were intentionally removed from Java?}
+Following are the features that Java did not include as compared to C++
+\begin{enumerate}
+  \item Java does not has any implementation of template classes as in C++
+  \item Java does not support multiple inheritance i.e. classes in Java cannot have more than one parent class which is also referred to as super-class.
+  \item Java does not support operator overloading
+  \item Java does not support global variables
+  \item Java has no pointers and instead uses dynamic references.
+  \item No header files are required in Java.
+\end{enumerate}
+
+\section{What are the differences between C and Java?}
+Major difference between C and Java is that Java is a purely object-oriented programming language and has mechanism to defined classes and objects.
+
+Besides that here are the other differences between Java and C:
+\begin{enumerate}
+  \item Java does not include C unique statements like \verb+goto+, \verb+sizeof+ and \verb+typedef+.
+  \item Java does not contain the user datatype like \verb+enum+, \verb+struct+ and \verb+union+.
+  \item Java does not define the type modifiers like signed, unsigned, auto, extern and register.
+  \item Java does not have a preprocessor, therefore, it cannot use \verb+#define+, \verb+#include+ statements.
+  \item Java does not support any mechanism for defining variable arguments to functions.
+\end{enumerate}
+
+\section{Java API}
+These are libraries of compiled code that can be used in a program to perform various operations. Java API consist of the function and variables, that programmers are allowed access for their applications.
+
+\section{Why is Java secure?}
+Java is very secure as compared to other platform independent programming languages. This is due to the fact that java programs run inside a virtual machine called the Java Virtual Machine which handles most of the memory management, byte checking/verifying. In Java, the concept of pointers have been removed since pointers are not ideal in terms of security, instead of pointers, Java uses references.
+
+Java also provides automatic garbage collection i.e. the process of removal of unused objects from memory. It also has a better implementation mechanism. Lastly, Java provides more emphasis on compile-time error checking.
+
+\section{Expressions}
+A Java expression consists of variables, operators, literals, and method calls.
+
+\emph{Example:}
+\begin{verbatim}
+int score;
+score = 90;
+\end{verbatim}
+Here, \verb+score=90+ is an expression that returns an integer.
+
+Consider another example,
+\begin{verbatim}
+Double a = 2.2, b = 3.4, result;
+result = a + b - 3.4;
+\end{verbatim}
+Here, \verb|a + b - 3.4| is an expression.
+
+\subsection{Rational Expression}
+Rational expression are basically a form of expressions where the expression indicated the condition that the system evaluates.
+
+The syntax for a rational expression is as follows:
+
+\begin{verbatim}
+variable 1 ralational_operator variable2;
+\end{verbatim}
+\emph{Example}
+\begin{verbatim}
+var 1 == var2;
+var1 > var2;
+\end{verbatim}
+
+\subsection{Boolean Expression}
+A boolean expression is a Java expression that returns a boolean value i.e. \emph{True} or \emph{False}. It is useful when comparing two or more values.
+
+\emph{Example}
+\begin{verbatim}
+int x = 10;
+int y = 9;
+System.out.println(x>y); // returns True
+\end{verbatim}
+
+\subsection{Logical Expression}
+It is a type of boolean expression that uses logical operators to combine multiple boolean expressions. These are often used in control flow statements, such as \verb+if+, \verb+while+, to make decision based on the truth/falsehood of a statement.
+
+A logical can be expressed as:
+\begin{verbatim}
+if(condition1 && condition2) {
+  // statement
+}
+\end{verbatim}
+
+\section{Array}
+In Java an array is a container object that holds a fixed number of values of same datatype. These values can be of any type, some common datatypes are integers, string, objects.
+
+Arrays are useful for storing and manipulating large amounts of data. In java, arrays are created using the \verb+new+ operator, followed by the datatype and the size in square brackets.
+
+\begin{verbatim}
+int[] number = new int[size];
+\end{verbatim}
+
+\subsection{1D Array}
+Arrays that only have 1 index and move in a straight line are referred to as one dimensional arrays. 1D arrays are also called linear arrays.
+
+SYNTAX
+
+\verb+datatype[] array_name = new data_type[size];+
+
+\subsection{2D Array}
+These are those arrays that have 2 index and are laid in a matrix layout. These are also called double indexed variables.
+
+SYNTAX
+
+\verb+data_type[][] array_name = new data_type[row][column]+
+
+\section{Java Token}
+Java tokens are the smallest elements of a Java program that is meaningful to the Java compiler.
+
+Tokens in Java can be classified as follows:
+
+\begin{enumerate}
+  \item \textsc{Keyword}
+
+    These are pre-defined, reserved words in the Java programming language. These words are meant to perform special operations in the program. These reserved words are not meant to change or be used as a variable name as by doing so, we are trying to assign a new meaning to the keyword,
+    which is not allowed.
+
+    Following are the most common keywords used in Java:
+    \begin{itemize}
+      \item abstract
+      \item catch
+      \item do 
+      \item while 
+      \item try 
+      \item void 
+      \item public
+      \item private
+      \item static
+    \end{itemize}
+    and many more\dots
+
+  \item \textsc{Identifiers}
+
+    Identifiers are the general terms used for naming variables, functions, arrays, methods, packages, constants and many more. These are user defined and are required to follow a set of rules. These rules are:
+
+    \begin{enumerate}
+      \item These must have characters[A-Z]/[a-z] or numbers[0-9], and underscore(\_) or a dollar sign(\$).
+
+        \verb+@example+ is not valid as \verb+@+ is an invalid symbol.
+
+      \item There should be no space in the name of an identifier.
+      \item An identifier should not have numbers at the start of its name
+      \item Also it cannot be a keyword like void, public, etc.
+    \end{enumerate}
+
+  \item \textsc{Constants}
+
+    Constants are like regular variables but are not able to be overridden after being declared i.e. once declared, their values cannot be changed by the program.
+
+    Constants are also referred to as literals and can belong to any datatype.
+
+  \item \textsc{Special symbols}
+
+    As the name suggest, these are special symbols used for various functions in a Java program.
+
+  \item \textsc{Operators}
+
+    Java provides many operators which can be used as per our needs.
+
+    These operators are classified based on the functionality they provide. Some of the most commonly used operators are:
+    \begin{enumerate}
+      \item \texttt{Arithmatic Operators} (+, -, *, /, \%)
+      \item \texttt{Logical operator} (\&\&, \verb+||+, !)
+      \item \texttt{Increment and Decrement} (++,  - -)
+      \item \texttt{Assignment Operator} (=, +=, -=)
+      \item \texttt{Comparison Operator} (==, \verb+>+, \verb+<+, \verb+>=+, \verb+<=+)
+    \end{enumerate}
+\end{enumerate}
+
+\newpage
+\part{Unit 2}
+\section{Classes in Java}
+Java is a true object-oriented programming language and therefore, the underlying structure of all Java program are its classes.
+
+Anything we wish to represent in Java must be encapsulated in a class that defines the state and behavior of the program's basic components which are the objects.
+
+Classes create objects and objects use methods to communicate with each other.
+
+In short, classes can be defined as the fundamental building blocks of an object-oriented programming language such as Java. These are a collection of objects which are the basic components if a Java program these also define the state and behavior of that Java program.
+
+Classes are defined into two catagories:
+
+\begin{enumerate}
+  \item \textsc{Pre-defined Classes}
+
+    As the name implies, these are reserved classes provided by Java for the developers, each of these classes serve specific purpose.
+
+    Some example:
+    \begin{enumerate}
+      \item Scanner
+        It is a class in Java API and allows programmer to read input from various sources such as keyboards, files, network sockets. It is a part of the \verb+java.util+ package and is used to read primitive datatypes and string. Scanner is used along with the \verb+System.in+
+        object (which represents standard input streams like keyboard inputs.)
+      \item Console
+      \item System
+      \item String
+    \end{enumerate}
+
+  \item \textsc{User-defined class}
+
+    Classes that are created by the programmers, are called User-defined classes.
+\end{enumerate}
+
+\section{Objects}
+Java is a n object-oriented programmers language and almost everything in Java is an object, including primitive datatypes(\verb+int, float, double+, etc.) which are internally wrapped in objects of their corresponding wrapper classes(Integer, Float, Double, etc.)
+
+Objects are an instance of a class and have two main characteristics:
+\begin{enumerate}
+  \item \textsc{State:} It is represented by the values of its properties or fields. These values can change during the lifetime of an object.
+
+  \item \textsc{Behavior:} It is represented by the methods or functions the class can perform. These methods define the actions that an object can take.
+\end{enumerate}
+To create an object in Java, we use the \verb+new+ keyword and call the constructor of the class. The constructor is special method that is automatically called when object is created and it allows us to set the initial state of the object.
+
+\section{Polymorphism}
+It means that \emph{the same object has different behavior}.
+
+\subsection{Compile-time polymorphism}
+A polymorphism that exists at the time of compilation is called compile-time polymorphism. It is also known as static polymorphism. A good example of such polymorphism is method overloading.
+
+\subsubsection{Method overloading}
+Also called ad-hoc polymorphism is the ability of defining multiple methods with the same name in a class. When the method is invoked, the compiler picks the correct one based on the arguments passed to the method.
+
+This implies that overloaded methods must have different numbers or types of arguments.
+
+\subsection{Run-time Polymorphism}
+Polymorphism which exists at the time of execution, is called run-time polymorphism.
+
+A good example of this is method overriding.
+
+\subsubsection{Method overriding}
+It is the process of creating a method in a subclass that has the same name, number and types of arguments, as a method in a super-class. That new method then hides the superclass's method.
+
+\section{Constructors}
+A constructor is a special method with the same name as its class and no return type. It is called when a new class instance is created, which gives the class an opportunity to set up the object for use.
+
+Constructors like other methods, can accept argument and can be overloaded. But are not, inherited, like other methods.
+
+\subsection{Constructor Overloading}
+It can be defined as the concept of having more than one constructor with the same name but with different parameters so that every constructor can perform different tasks.
+
+\section{Inheritance}
+Inheritance is the process of creating new classes based on existing once. Here the class that inherits from another class  also called parent class or super class can reuse the methods and fields of that class. We can add new fields and method to our class as well.
+
+Following are the different types of inheritance:
+\begin{enumerate}
+  \item \textsc{Single level inheritance}
+
+    In single level inheritance, all the sub classes inherit the features of one super class. As demonstrated by the diagram below,
+    \vskip140pt
+
+    Here, the subclass B inherits from the parent class which is class A. Here, B can make use of method sin the class A.
+
+  \item \textsc{Multi level inheritance}
+
+    In multi level inheritance, a subclass inherits the features, methods from a super class just like a single level inheritance but instead of just being a subclass, this subclass also acts as a superclass for another class. This makes this inheritance feel like multiple single level
+    inheritance chained to one another. To demonstrate this, we draw the following diagram.
+    \vskip200pt
+
+    Here, class B inherits all the features from class A, these features are then passed on to C through the B which acts as a parent class to C.
+\end{enumerate}
+
+\section{Why is multiple inheritance not supported in Java?}
+When a subclass wants to inherit the propertise of two or more superclass that have same methods, the Java compiler can't decide which class to inherit.
+
+There also might be a chance of memory duplication. This is why Java does not support multiple inheritance.
+
+Consider a case where C inherits from class A and class B  and both have the same \verb+display()+ method. Now, the Java compiler cannot decide which method to use. To prevent these situations, multiple inheritance is not allowed in Java.
+\vskip200pt
+
+\section{Multiple inheritance using \texttt{interface}}
+We can achieve multiple inheritance by using interface because interface only contains abstract methods which implementation is provided by the subclasses.
+\begin{verbatim}
+interface A {
+  void show();
+}
+interface B {
+  void show();
+}
+class Multiple implements A, B {
+  public void show() {
+    System.out.println("Interface A and B")
+  }
+  public static void main(String[] args){
+    Multiple m = new Multiple();
+    m.show();
+  }
+  }
+\end{verbatim}
+
+\section{Packages}
+Packages in Java are the way of grouping together related classes and interfaces. Packages enable modular group of classes to be available only if they are needed and eliminate potential conflicts between class names in different groups of classes.
+
+Types of packages:
+\begin{enumerate}
+  \item \textsc{Pre-defined}
+
+    These are pre-existing packages that are part of the Java Development Tools provided by the Java Development Kit.
+
+    Some of the most used pre-defined packages are:
+
+    \begin{enumerate}
+      \item \texttt{java.lang}
+      \item \texttt{java.util}
+      \item \texttt{java.io}
+      \item \texttt{java.awt}
+      \item \texttt{java.applet}
+      \item \texttt{java.net}
+      \item \texttt{java.SQL}
+    \end{enumerate}
+
+  \item \textsc{User-defined}
+
+    These are packages that are created by the programmers and are used to store code that are repeatedly used in multiple programs. User-defined packages are created with the help of \verb+package+ keyword. To use those packages, we need to use the \verb+import+ keyword.
+
+    Advantages of User-defined packages are:
+    \begin{enumerate}
+      \item Reuseability
+      \item Security
+      \item Fast Searching
+      \item Mitigating Naming conflicts
+      \item Efficiency
+    \end{enumerate}
+\end{enumerate}
+
+\section{Garbage Collection}
+In java, garbage collection means un-referenced objects. Garbage collection is the process of  reclaiming the runtime unused memory automatically. In other words, \emph{IT IS A WAY TO DESTROY THE UNUSED OBJECTS.}
+
+Garbage collector of JVM collects only those objects that are created with the help of the new keyword. If we have to create any object without the new keyword, we have to use the finalize method to perform the cleanup process(destroying remaining objects).
+
+
+\section{Finalize method}
+It is called by the JVM when an object is no longer being used(i.e., when there are no further references for it) but before the object's memory is actually reclaimed by the system.
+
+\newpage
+\part{Unit 3}
+\section{Exception Handling}
+It is a mechanism to handle runtime errors, so that normal flow of the program can be maintained.
+
+Following are the advantages of exception handling:
+\begin{enumerate}
+  \item Using exception handling, we can separate the error handling code from normal code.
+  \item Using exception handling, we can differentiate between the error types.
+  \item Normal flow of the program can be maintained.
+\end{enumerate}
+
+\subsection{Checked exceptions}
+These are the exceptions that are checked at the compiled time. Checked exceptions forces us to use try-catch or throws statements to mitigate those exceptions. All exceptions except Error, RuntimeException and their subclasses are checked exceptions.
+
+Some examples of check exceptions are: IOException, SQLException, etc.
+
+\subsection{Unchecked exceptions}
+Unchecked exceptions are not checked at compile time by the java compiler. These are checked at runtime of the program. These type of exceptions do not force you to use try-catch, throws statements. 
+
+RuntimeException and all its subclasses are example of unchecked exceptions. These exceptions occur due to bad programming practices.
+
+\section{Multi-threading in Java}
+Multi-threading is the process of  executing multiple tasks(also known as threads) simultaneously providing concurrent execution of two or more parts of a program to make maximum use of CPU time as most modern CPU can handle more than one thread when needed.
+
+A multi-threaded program contains multiple parts that can run concurrently. This feature enables the  programmers to write better and efficient codes without compromising quality and performance of the program.
+
+\subsection{How to create threads  in Java?}
+In Java, threads are implemented in the form of objects that contains a method called run() method. This run() method is the heart and soul of a thread in a Java program. It makes up the entire body of the thread and is the only method in which the thread behavior can be implemented.
+
+A typical run() method can be written as follows:
+\begin{verbatim}
+public void run() {
+  // Statement for implementing thread.
+}
+\end{verbatim}
+
+\subsection{Life cycle of thread.}
+In Java, a thread goes through the following stages in its life cycle i.e. the point from which it is created to the point it is to be destroyed.
+
+\begin{enumerate}
+  \item Newborn/New Thread state
+  \item Runnable state
+  \item Running state
+  \item Block state
+  \item Dead state
+\end{enumerate}
+
+\section{Autoboxing}
+It is the automatic conversion that the Java compiler makes between the primitive datatypes(int, float, double, boolean, etc.) and their corresponding object wrapper classes(Integer, Float, Double, Boolean, etc.).
+
+Example:
+\begin{verbatim}
+class BoxingExample {
+  public static void main(String[] args) {
+    int a = 50;
+    Integer a2 = new Integer(a); // Boxing
+    Integer a3 = 5; // Boxing
+    System.out.println(a2 + " " + a3);
+  }
+}
+\end{verbatim}
+
+\section{Unboxing}
+It is the automatic conversion that the Java Compiler makes between the object wrapper class(Integer, Float, Double, Boolean, etc.) and their corresponding primitive datatypes.
+
+\begin{verbatim}
+class UnboxingExample {
+  public static void main(String[] args) {
+    Integer i = new Integer(50);
+    int a = i;
+    System.out.println(a);
+  }
+}
+\end{verbatim}
+
+\section{Abstract class}
+Abstract classes are classes declared with abstract. They can be subclassed or extended, but cannot be instantiated. You can think of them as a class version of interfaces, or as an interface with actual code attached to the methods.
+
+\section{Interface}
+An interface is a collection of method names, without actual definitions, that indicates that a class has a set of behaviors in addition to the behaviors the class gets from its superclasses.
+
+We can use the keyword implements to create an interface in Java.
+\begin{enumerate}
+  \item Interface are public and abstract by default.
+  \item Interface variables are by default public + static + final.
+  \item Interface method must be overridden inside the implementing classes.
+\end{enumerate}
+
+
+\end{document}

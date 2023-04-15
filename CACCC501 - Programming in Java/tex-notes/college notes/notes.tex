@@ -1,0 +1,272 @@
+\documentclass[11pt, a4paper, oneside]{book}
+
+% {{{ Packages
+        \usepackage[margin=1in]{geometry}                           % Margins
+          \linespread{1.2}                                          % Increases line spacing
+        \usepackage{graphicx}                                       % Image Support
+          \graphicspath{ {./images/} }                              % Path to image directory
+        \usepackage{color}                                          % Colors for stuff
+        \usepackage{soul}                                           % Provides Highlight feature
+        \usepackage{fancyhdr}                                       % Fancy Header and footer
+        \usepackage{amsmath}                                        % Math support
+        \usepackage{amssymb}                                        % Extended symbols for math
+        \usepackage{todonotes}                                        % Extended symbols for math
+        \usepackage{caption}
+        % \usepackage{etoolbox}                                       % IDK what it does. I just coppied it from stackexchage
+        %   \AtBeginEnvironment{align}{\setcounter{equation}{0}}      % resets align counter for each instance
+        \usepackage{listings}                                       % Code-snippet support
+          \definecolor{dkgreen}{rgb}{0,0.6,0}                     % lst-configs
+          \definecolor{gray}{rgb}{0.5,0.5,0.5}
+          \definecolor{mauve}{rgb}{0.58,0,0.82}
+
+          \lstset{                                                % lst-format-config
+            frame=tb,
+            language=Java,
+            aboveskip=3mm,
+            belowskip=3mm,
+            showstringspaces=false,
+            columns=flexible,
+            basicstyle={\ttfamily},
+            numbers=left,
+            numberstyle=\small\color{gray},
+            keywordstyle=\color{blue},
+            commentstyle=\color{dkgreen},
+            stringstyle=\color{mauve},
+            breaklines=true,
+            breakatwhitespace=true,
+            tabsize=3
+          }
+        \usepackage{caption}                                      % Caption support
+        \usepackage[utf8]{inputenc}                               % utf encoding
+        \usepackage{hyperref}
+          \hypersetup{pdfnewwindow=true, colorlinks=false}
+% }}}
+
+% {{{ Footer section
+        % Creates footer
+        \pagestyle{fancy}%
+        \fancyhf{}%
+        \lfoot{Swapnil}%
+        \cfoot{iamb4uc.xyz}%
+        \rfoot{Page \thepage}%
+        \renewcommand{\headrulewidth}{0pt}% Line at the head invisible
+        \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+
+        % Redefine the plain page style for chapter pages
+        \fancypagestyle{plain}{%
+          \fancyhf{}%
+          \fancyfoot[L]{Swapnil}%
+          \fancyfoot[C]{iamb4uc.xyz}%
+          \fancyfoot[R]{Page \thepage}%
+          \renewcommand{\headrulewidth}{0pt}% Line at the head invisible
+          \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+        }
+% }}}
+
+% Title{{{
+
+        \title{\Huge{\texttt{Programming in Java}} \large{college notes}}
+        \author{\huge{by \emph{Swapnil}}\\ \\ \Large{written in {\LaTeX}}}
+        \date{\today}
+%}}}
+
+
+\begin{document}%{{{
+
+%{{{ Title page
+      \maketitle
+      \thispagestyle{empty}
+      % \newpage
+% }}}
+
+%{{{ ToC
+      \setcounter{tocdepth}{3}
+      \tableofcontents
+% }}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Body %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{How to implement package in Java}
+\begin{itemize}
+  \item First we create a package named empPack (\textit{say})
+  \item Create class file ie create a Java file test, test1 (\textit{say})
+    \begin{lstlisting}%{{{
+
+      package empPack;
+
+      class test
+      {
+        public void disp_test()
+        {
+          System.out.println("Hello display test ");
+        }
+      }
+      public class test1 extends test
+      {
+        public void disp_test1()
+        {
+          System.out.println("Hello display test 1");
+        }
+      }
+    \end{lstlisting}%}}}
+
+  \item Now again create a Java file having main method where we will
+    import the above package
+    \begin{lstlisting}%{{{
+
+      import empPack.*;
+      public class packtest22 {
+        public static void main(String[] args) {
+          test1 t=new test1();
+          t.disp_test();
+          t.disp_test1();
+        }
+      }
+    \end{lstlisting}%}}}
+
+\end{itemize}
+
+\section{Practical Assignment}
+\begin{itemize}
+\item Write a Java program to show how packages are create and
+  imported to another Java program.
+\item Write a Java program to implement the concept of multiple
+  inheritence through interface
+
+    \begin{lstlisting}%{{{
+
+    interface I {
+      final static int x=13;
+      void disp_2();
+    }
+
+    \end{lstlisting}%}}}
+
+\item Implement multilevel inheritence.
+\end{itemize}
+
+\chapter{Unit 3}
+\section{Exception Handling}
+\begin{itemize}
+  \item Mechanism to handle the runtime errors such as \texttt{ClassNotFoundException}, \texttt{IOException}, \texttt{SQLException}, \texttt{RemoteException}.
+  \item An exception is an event that disrupts the normal flow of the program.
+  \item It is an object which his thrown at runtime.
+\end{itemize}
+
+\subsection{Types of exceptions}
+\begin{itemize}
+  \item \textit{Checked}
+
+    Checked Exceptions are checked at compile time. Example \texttt{IOException}, \texttt{SQLException},
+
+  \item \textit{Unchecked Exceptions}
+
+    Are not checked at compile time but checked at runtime.
+\end{itemize}
+
+\subsection{Keywords used in exception handling}
+\begin{itemize}
+  \item \texttt{try}
+  \item \texttt{catch}
+  \item \texttt{finally}
+  \item \texttt{throw}
+  \item \texttt{throws}
+
+\end{itemize}
+
+\subsection{Multithreaded programming}
+\begin{itemize}
+  \item (\textit{extend}) Thread Class
+  \item (\textit{implement}) Roundable
+\end{itemize}
+
+\newpage
+\centering{\emph{\small{Thread Example}}}
+\begin{lstlisting}
+package csjava;
+
+class tA extends Thread {
+  public void run() {
+    for{i=1;i<=5;i++}
+      System.out.println("i = "+i)
+  }
+}
+
+class tB extends Thread {
+  public void run() {
+    for{j=1;j<=5;j++}
+      System.out.println("i = "+i)
+  }
+}
+
+class tC extends Thread {
+  public void run() {
+    for{k=1;k<=5;k++}
+      System.out.println("i = "+i)
+  }
+}
+
+public class threadExample {
+  public static void main(String[] args) {
+    tA A = new tA();
+    tB B = new tB();
+    tC C = new tC();
+
+    A.start();
+    B.start();
+    C.start();
+  }
+}
+\end{lstlisting}
+
+
+\centering{\emph{\small{Runable Example}}}
+\begin{lstlisting}
+  package csjava;
+
+  class tA1 implements Runnable {
+    public void run{
+      for(i=1;i=<5;i++)
+        System.out.println{"i = " +i};
+    }
+  }
+
+  class tA2 implements Runnable {
+    public void run{
+      for(j=1;j=<5;j++)
+        System.out.println{"i = " +i};
+    }
+  }
+  class tA3 implements Runnable {
+    public void run{
+      for(k=1;k=<5;k++)
+        System.out.println{"i = " +i};
+    }
+  }
+
+  public class threadExample {
+    public static void main(String[] args) {
+      tA1 A = new tA1():
+      tA2 B = new tA2():
+      tA3 C = new tA3():
+
+      Thread t1 = new Thread(A);
+      Thread t2 = new Thread(B);
+      Thread t3 = new Thread(C);
+
+      t1.start();
+      t2.start();
+      t3.start();
+    }
+  }
+\end{lstlisting}
+
+\newpage
+\section{Questions}
+\subsection{Demonstrate Exception handling using predefined atleast 3 predefined exceptions}
+\subsection{How to create user defined exceptions. Explain with examples}
+
+\end{document}%}}}

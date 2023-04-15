@@ -1,0 +1,89 @@
+\documentclass[12pt, a4paper]{memoir}
+%{{{
+% Packages{{{
+  % \usepackage[hmarginratio=1:1,margin=1.2in]{geometry}
+  %   \linespread{1.2}
+  % \usepackage{graphicx}
+  %   \graphicspath{ {./images/} }
+  % \usepackage[dvipsnames]{xcolor}
+  % \usepackage[sc]{mathpazo}
+  \trimFrame
+  \settrimmedsize{210mm}{145mm}{*} 
+  \settrims{20mm}{34mm}
+  % \usepackage{microtype}
+  % \usepackage{amssymb}
+  % \usepackage{amsmath}
+  % \usepackage{fancyhdr}
+  % \usepackage{titling}
+  %   \renewcommand\maketitlehooka{\null\mbox{}\vfill}
+  %   \renewcommand\maketitlehookd{\vfill\null}
+  % \usepackage{background}
+  % \backgroundsetup{contents=Swapnil}
+
+  \usepackage{listings}
+    \lstset{
+      frame=lrtb,
+      language=C,
+      aboveskip=15px,
+      belowskip=2px,
+      showstringspaces=false,
+      columns=flexible,
+      basicstyle={\small\ttfamily},
+      xleftmargin=5px,
+      xrightmargin=5px,
+      breakatwhitespace=true,
+      tabsize=2
+    }
+
+  \usepackage{tcolorbox}
+  \usepackage[utf8]{inputenc}
+%}}}
+
+% Footer section {{{
+  % Creates footer
+  \pagestyle{fancy}%
+  \fancyhf{}%
+  \lfoot{Assignment}
+  \cfoot{\emph{Swapnil}}
+  \rfoot{Page \thepage}
+  \renewcommand{\headrulewidth}{1pt}% Line at the head invisible
+  \renewcommand{\footrulewidth}{1pt}% Line at the footer visible
+% }}}
+
+% Title {{{
+  \title{\Huge{\emph{Practical on Numerical Statistical Method}}\\ \normalsize{Practical Notebook}}
+  \author{}
+  \date{}
+% }}}
+%}}}
+
+\begin{document}
+\parindent0pt
+
+%Title page{{{
+  \begin{titlingpage}
+    \maketitle
+    \thispagestyle{empty}
+    %{{{
+    \begin{tcolorbox}
+      \textbf{\emph{Name}}: \verb+Swapnil Bhowmik+
+
+      \textbf{\emph{Class Roll Number}}: \verb+7070+
+
+      \textbf{\emph{University}}:
+
+      \ \ \ \ \emph{Registration Number}: \verb+20200006768+
+
+      \ \ \ \ \emph{Roll}: \verb+052120+
+
+      \ \ \ \ \emph{Number}: \verb+400200086+
+
+      \textbf{\emph{Paper Code}}: \verb+CACDSE503L+
+    \end{tcolorbox}
+    %}}}
+  \end{titlingpage}
+  \newpage
+%}}}
+
+
+\end{document}

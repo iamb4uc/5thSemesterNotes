@@ -1,0 +1,25 @@
+<html>
+<body>
+<script type="text/javascript">
+  function phrase() {
+   
+   var str = document.getElementById("str").value;
+   
+var s=parseInt(document.getElementById("s1").value);
+var e=parseInt(document.getElementById("s2").value);
+
+var p=str.slice(s,e);
+alert("Phrase is "+p);
+
+
+}
+</script>
+<form >
+  Enter a String/Number: <input type="text" id="str" name="string" /><br />
+<p><h5>Pick a phrase from array of sentence</h5>
+Enter the starting position<input type="text" id="s1" name="s1" /><br>
+Enter terminating position<input type="text" id="s2" name="s2" /><br>
+<input type="submit" value="Check" onclick="phrase();"/>
+</form>
+</body>
+</html>

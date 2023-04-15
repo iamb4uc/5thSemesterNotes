@@ -1,0 +1,446 @@
+\documentclass[10pt, twoside, a4paper]{article}
+
+% Packages{{{
+\usepackage[sc]{mathpazo}
+\usepackage{graphicx}
+  \graphicspath{ {./images/} }
+\usepackage[T1]{fontenc}
+  \linespread{1.1}
+\usepackage{microtype}
+\usepackage{soul}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[english]{babel}
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=15pt]{geometry}
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{booktabs}
+
+\usepackage{lettrine}
+
+\usepackage{enumitem}
+  \setlist[itemize]{noitemsep}
+
+\usepackage{titlesec}
+% \renewcommand\thesection{Roman{section}}
+% \renewcommand\thesubsection{{subsection}}
+\titleformat{\section}[block]{\Large\scshape\centering}{\thesection.}{1em}{}
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{}
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[RE,LO]{\thepage} % Custom footer text
+
+\usepackage{titling}
+
+\usepackage{hyperref}
+%}}}
+
+% Title{{{
+\setlength{\droptitle}{-4\baselineskip}
+
+\pretitle{\begin{center}\Huge\bfseries}
+\posttitle{\end{center}}
+\title{Numerial and statistical method}
+\author{ by
+  \textsc{Swapnil}%\\[1px]
+}
+\date{}
+%}}}
+
+\begin{document}
+% FontMatter {{{
+\maketitle
+
+% \twocolumn
+%}}}
+% \parindent0pt
+
+\section{Calculas of finite difference}%{{{
+The calculas of finite difference deals with the changes in the values of
+the dependent variable due to the changes in the independent variable.
+
+Let, `$y$' be a function of `$x$' represented by $y=f(x)$. Let, $a, a+h, a+2h,
+\dots,(a+nh)$ be the $(n+1)$ equidistant values of $x$ and $f(a), f(a+h),\dots
+f(a+nh)$ be the corresponding values of $f(x)$ are called entries.
+
+\vskip10pt
+\noindent Again,
+\begin{align*}
+  (a+h)-a &= (a+2h)-(a+h) =(a+3h)-(a+2h)=\dots\\
+          &= (a+nh)-\{a+(n-1)h\}\\
+          &= h \text{\hskip10pt [where `h' is called the interval of differences]}
+\end{align*}%}}}
+
+\subsection{Difference of first order ($\Delta$)}%{{{
+\begin{equation*}
+  \Delta f(x)=f(x+h)-f(x)
+\end{equation*}%}}}
+
+\subsection{Difference of second order ($\Delta^2$)}%{{{
+\begin{align*}
+  \Delta^2 f(x) &= \Delta \{\Delta f(x)\}\\
+                &= \Delta \{f(x+h)-f(x)\}\\
+                &= \Delta f(x+h)-\Delta f(x)\\
+                &= f(x+2h)-f(x+h)-\{f(x+h)-f(x)\}\\
+   \Delta^2f(x) &= f(x+2h)-2f(x+h)+f(x)\\
+\end{align*}%}}}
+
+\subsection{Difference of third order ($\Delta^3$)}%{{{
+\begin{align*}
+  \Delta^3 f(x) &= \Delta \{\Delta^2 f(x)\}\\
+                &= \Delta \{f(x+2h)-2f(x+h)+f(x)\}\\
+                &= f(x+3h)-f(x+2h)-2f(x+2h)+2f(x+h)+f(x+h)-f(x)\\
+                &= f(x+3h)-3f(x+2h)+2f(x+h)-f(x)
+\end{align*}%}}}
+
+\section{Difference Table}%{{{
+When we arrange the difference of various orders of a function systematically 
+along with arguments and entries in a table, then it is known as difference 
+table.
+% Let, $x_0,x_1,x_2,x_3$ are 4 equidistant values of x such that
+% $x_1-x_0,x_2-x_1,x_3-x_2=h$ and $f(x_0),f(x_1),f(x_2),f(x_3)$
+% are the corresponding values of $f(x)$, then the difference
+% table is
+%}}}
+
+\section{Interpolation}%{{{
+Interpolation is a technique of estimating the approximates of the value of
+the value of the independent variable, between its two extreme values.
+
+\subsection{Assumption of interpolation}
+The application of principal of interpolation is subject to the following
+assumption.
+
+\begin{itemize}
+  \item There is no sudden jumps in figures from one period to another period.
+  \item The rate of change of figure is uniform, over-time.
+\end{itemize}
+
+\subsection{Different Interpolation Formula}%{{{
+\subsubsection{Newton's Forward Interpolation Formula}%{{{
+It is used to estimate the value of the dependent variable corresponding to a 
+given value of the independent variable, if:
+
+\begin{itemize}
+  \item The independent variable $x$, increases by equal intervals.
+  \item The value of $x$, corresponding to which the value of $y$ is to be 
+    interpolated in the first hub of the series.
+\end{itemize}
+The formula is
+
+\begin{tcolorbox}
+\begin{align*}
+  f(x)=f(x_0)+U\Delta f(x_0) &+ \frac{U(U-1)}{2!}\Delta^2f(x_0)
+       +\frac{U(U-1)(U-2)}{3!}\Delta^3f(x_0)\\
+                             &+ \dots+\frac{U(U-1)(U-2)\dots\{U-(n-1)\}}{n!}
+                                \Delta^nf(x_0)
+\end{align*}
+\end{tcolorbox}
+
+\begin{equation*}
+  \text{where, } U = \frac{x-x_0}{h} \text{ and } h \text{ is the interval of
+  differences.}
+\end{equation*}
+%}}}
+
+\subsubsection{Newton's Backward Interpolation Formula}%{{{
+Let, $f(x)$ be a polynomial of degree $n$ and $n+1$ equidistant values of $x$ 
+along then corresponding values of $f(x)$. The Newton's backward interpolation
+formula is
+
+\begin{tcolorbox}
+\begin{align*}
+  f(x) = f(x_n)+U\nabla f(x_n-1) &+ \frac{U(U+1)}{2!}\nabla^2f(x_n-2)
+  +\frac{U(U+1)(U+2)}{3!}\nabla^3f(x_n-3)\\
+                                 &+ \dots+\frac{U(U+1)\dots\{U+(n-1)\}}{n!}
+                                 \nabla^nf(x_0)
+\end{align*}
+\end{tcolorbox}
+
+\begin{equation*}
+  \text{where, } U = \frac{x-x_0}{h} \text{ and } h \text{ is the interval of
+  differences.}
+\end{equation*}
+
+The Newton's backward interpolation formula is used to estimate values of the 
+dependent variable corresponding to a given value of the independent variable.
+
+\begin{itemize}
+  \item The independent variable $x$ increases by equal intervals.
+  \item The value of $x$ corresponding to each value of $y$ is to be
+    interpolated in the 2\textsuperscript{nd} half of the series.
+\end{itemize}
+%}}}
+
+\subsubsection{Lagrange's Interpolation Formula}%{{{
+Let, $f(x_0),f(x_1),\dots,f(x_n)$ be the entries corresponding to the
+arguments $x_0, x_1,\dots,x_n$ which are not necessarily in equal interval.
+The interpolation formula given by Lagrange to estimate the value of $y$
+corresponding to a value of $x$ between any two consecutive values of the
+given values is
+\begin{tcolorbox}
+  \begin{align*}
+    f(x) &= \frac{(x-x_1)(x-x_2)
+             \dots(x-x_n)}{(x_0-x_1)(x_0-x_2)
+             \dots(x_0-x_n)}f(x_0)
+          + \frac{(x-x_0)(x-x_2)
+             \dots(x-x_n)}{(x_1-x_0)(x_1-x_2)
+             \dots(x_1-x_n)}f(x_1)\\
+         &+ \dots 
+          + \frac{(x-x_1)(x-x_2)
+             \dots(x-x_{n-1})}{(x_n-x_0)(x_n-x_1)
+             \dots(x_n-x_{n-1})}f(x_n)
+  \end{align*}
+\end{tcolorbox}
+
+Lagrange's interpolation formula is usually and when the values of the
+independent values of the independent variable $x$ are not equidistant. To 
+apply Lagrange's formula the value of $x$ corresponding to which the value of
+$y$ us to be interpolated may be anywhere in between the first and last terms.
+No difference table is needed to apply Lagrange's formula.%}}}
+%}}}
+
+%}}}
+
+\section{Numerical Integration}%{{{
+\begin{center}
+  \emph{Numerical Integration is the process of finding or evaluating definate
+  integrals.}
+\end{center}
+
+$I=\int_{a}^bf(x)dx$ from a set of numerical value of the integrant $f(x)$. If 
+it is applied to the integration of a function of a single variable then the
+process is known as quadrature. The problem of numerical integration is solved 
+by first apporximating the integrant by a polynomial with the help of an
+interpolation formula and then integrating this expression between the desired
+limits.
+\begin{align*}
+  \int xdx   &= \frac{x^2}{2}\\
+  \int x^ndx &= \frac{x^{n+1}}{n+1}
+\end{align*}
+
+\subsection{General quadrature formula}%{{{
+\begin{tcolorbox}
+\begin{align*}
+  I &= \int_{0}^{n}\{y_0+U\Delta y_0
+     +\frac{U^2-U}{2!}\Delta^2y_0+\frac{U^3-3U^2+2U}{3!}\Delta^3y_0\\
+    &+ \dots +\ upto\ (n+1)\ terms\} hdu\\
+    \ \\
+    &= h[y_0U+\Delta y_0\frac{U^2}{2}
+     +\frac{\Delta^2y_0}{2!}(\frac{U^3}{3}-\frac{U^2}{2})
+     +\frac{\Delta^3y_0}{3!}(\frac{U^4}{4}-\frac{U^3}{3}+\frac{U^2}{2})\\
+    &+ \dots+upto\ (n+1)\ terms]_{0}^{n}\\
+    \ \\
+    &= h[ny_0+\frac{n^2}{2}\Delta y_0
+     +(\frac{n^3}{3}-\frac{n^2}{2})\frac{\Delta^2y_0}{2!}
+     +(\frac{n^4}{4}-n^3-n^2)\frac{\Delta^3y_0}{3!}\\
+    &+ \dots+upto\ (n+1)\ terms]
+\end{align*}
+  
+\end{tcolorbox}
+%}}}
+
+\subsection{Trapezoidal Rule}%{{{
+The general quadrature formula is
+\begin{align*}
+I &=\int_{a=x_0}^{b=x_0+nh}f(x)dx\\
+  &= h[ny_0+\frac{n^2}{2}\Delta y_0
+   + (\frac{n^3}{3}-\frac{n^2}{2})
+      \frac{\Delta^2y_0}{2!}
+   + (\frac{n^4}{4}-n^3+n^2)
+      \frac{\Delta^3y_0}{3!}
+    &+ \dots+upto\ (n+1)\ terms]
+\end{align*}
+Putting $n=1$ in the above equation, and neglecting all the differences higher
+than first order, we get:
+\begin{align*}
+  I_1 &= \int_{x_0}^{x_0+h}f(x)dx\\
+      &= h[y_0+\frac{1}{2}\Delta y_0]\\
+      &= h[y_0+\frac{1}{2}(y_1-y_0)]\\
+      &= h[\frac{2y_0+y_1-y_0}{2}]\\
+      &= h[\frac{y_0+y_1}{2}]\\
+  \text{Similarly,}\\
+  I_2 &= \int_{x_0+h}^{x_0+2h}f(x)dx = h[\frac{y_1+y_2}{2}]\\
+  I_3 &= \int_{x_0+2h}^{x_0+3h}f(x)dx = h[\frac{y_2+y_3}{2}]\\
+\dots \\
+  I_n &= \int_{x_0+(n-1)h}^{x_0+nh}f(x)dx = h[\frac{y_{(n-1)}+y_n}{2}]\\
+  \text{Adding these n integrals, we get}\\
+\end{align*}
+\begin{tcolorbox}
+\begin{align*}
+  \int_{x_0}^{x_0+nh}f(x)dx &= h[(\frac{y_0-y_1}{2})+(\frac{y_1-y_2}{2})
+                             + \dots+(\frac{y_{(n-1)}+y_n}{2})]\\
+                            &= h[(\frac{y_0+y_n}{2})+(y_1+y_2+y_3
+                             + \dots+y_{n-1})]\\
+  \text{This is called the Trapezoidal rule.}
+\end{align*}
+\end{tcolorbox}
+
+\subsubsection{Condition for validity of trapezoidal rule}
+\begin{itemize}
+  \item $f(x)$ should be a polynomial of degree of 1, IE a straight line of the
+    form $f(x)=a+bx$
+  \item The value of $x$ should be equidistant
+  \item The number of divisions of ther integral ($x_0,x_0+nh$) should be
+    multiple of 1, like 3, 5, 7, etc
+\end{itemize}
+%}}}
+
+\subsection{Simpson's $\frac{1}{3}^{rd}$ rule}%{{{
+Putting $n=2$ in the general quadrature formula, and neglecting all the
+differences higher then second order, we get:
+
+\begin{align*}
+  I_1=\int_{a=x_0}^{b=x_0+2h}f(x)dx &= h[2y_0+2\Delta y_0
+                                      +(\frac{8}{3}-2)\frac{\Delta^2y_0}{2!}]\\
+                                    &= h[2y_0+2(y_1-y_0)+(\frac{8}{3}-2)
+                                       \frac{y_2-2y_1+y_0}{2}]\\
+                                    &= h[2y_0+2y_1-2y_0+\frac{2}{3}
+                                      *\frac{y_2-2y_1+y_0}{2}]\\
+                                    &= h[2y_1+\frac{y_2-2y_1+y_0}{3}]\\
+                                    &= h[\frac{6y_1+y_2-2y_1+y_0}{3}]\\
+                                    &= h[\frac{y_0+4y_1+y2}{3}]\\
+                                    &= \frac{h}{3}(y_0+4y_1+y_2)\\
+  \text{Simillarly,}\\
+   I_4 &= \int_{x_0+2h}^{x_0+4h}f(x)dx = \frac{h}{3}(y_2+4y_3+y_4)\\
+  \text{And,}\\
+  I_n &= \int_{x_0+(n-2)h}^{x_0+nh}f(x)dx = \frac{h}{3}(y_{n-2}+4y_{n-1}+y_n)\\
+  \text{Adding these integrals, we get}\\
+\end{align*}
+\begin{tcolorbox}
+\begin{align*}
+  \int_{x_0}^{x_0+nh}f(x)dx &= \frac{h}{3}(y_0+y_n)+4(y_1+y_3+
+                               \dots+y_{n-1})\\
+                            &+ 2(y_2+y_4+\dots+y_{n-2})\\
+  \text{This is Simpson's $\frac{1}{3}^{rd}$ formula.}
+\end{align*}
+\end{tcolorbox}
+\subsubsection{Condition for validity of Simpson's $\frac{1}{3}^{rd}$ rule.}
+
+\begin{itemize}
+  \item $f(x)$ should be a polynomial of degree 2 of the form $f(x)=a+bx+cx^2$
+  \item The values of x should be equidistant
+  \item The number of division of the interval $(x_0,x_0+nh)$ should be
+    multiple of 2 like 2, 4, 6, 8, 10, etc.
+\end{itemize}
+%}}}
+
+\subsection{Simpson's $\frac{3}{8}^{th}$ rule}%{{{
+Putting $n=3$ in the general quadrature formula and neglicting all the
+difference higher than third order, we get:
+
+\begin{align*}
+  I_1 = \int_{x_0}^{x_0+3h}f(x)dx &=h[3y_0+\frac{3}{2}\Delta y_0
+                                   +(\frac{27}{3}-\frac{9}{2})
+                                     \frac{\Delta^2y_0}{2!}
+                                   +(\frac{81}{4}-27+9)
+                                     \frac{\Delta^3y_0}{3!}]\\
+                                  &=h[3y_0+\frac{3}{2}(y_1-y_0)
+                                   +(9-\frac{9}{2})(\frac{y_2-2y_1+y_0}{2})
+                                   +(\frac{81}{4}-27+9)\\
+                                  & (\frac{y_3-3y_2+3y_1-y_0}{6})]\\
+                          \ \\
+                                  &= h[3y_0+\frac{9}{2}(y_1-y_0)
+                                   +\frac{9}{3}(\frac{y_2-2y_1+y_0}{2})
+                                   +\frac{3}{8}(y_3-3_2+3y_1-y_0)]\\
+                                  &=\frac{3h}{8}[8y_0+12(y_1-y_0)
+                                  +6(y_2-2y_1+y_0)+(y_3-3y_2+3y_1-y_0)]\\
+                                  &=\frac{3h}{8}[y_0+3y_1+3y_2+y_3]\\
+  \text{Similarly,}\\
+                                  & \int_{x_0+3h}^{x_0+6h}f(x)dx
+                                  =\frac{3h}{8}[y_3+3y_4+3y_5+y_6]\\
+  \dots\\
+                                  & \int_{x_0+(n-3)h}^{x_0+nh}f(x)dx 
+                                  =\frac{3h}{8}[y_{n-3}+3y_{n-2}
+                                  +3y_{n-1}+y_n]\\
+  \text{Adding all the integrals,}\\
+\end{align*}
+\begin{tcolorbox}
+\begin{align*}
+         \int_{x_0}^{x_0+nh}f(x)dx&=\frac{3h}{8}[(y_0+y_n)
+                                   +3(y_1+y_2+y_4+y_5+\dots+y_{n-1})\\
+                                  &+2(y_3+y_6+\dots+y_{n-3})]\\
+  \text{This is Simpson's $\frac{3}{8}^{rd}$ rule.}
+\end{align*}
+\end{tcolorbox}
+
+
+\subsubsection{Conditions for validity of Simpson's $\frac{3}{8}^{rd}$ rule.}
+\begin{itemize}
+  \item $f(x)$ should be a polynomial of degree 3 of the form 
+    $f(x)=a+6x+cx^2+dx^3$
+  \item The value of $x$ should be equidistant.
+  \item The number of division of the interval $(x_0,x_0+nh)$
+    should be multiple of 3 like 3, 6, 9, etc.
+\end{itemize}
+%}}}
+%}}}
+
+\section{Bi-section Method}%{{{
+This method of solving a trascendental equation consists in locating the roots of the
+equation $f(x)=0$ between two number, say $x_0$ and $x_1$, such that $f(x)$ is
+continuous for $x_0\leq x\leq x_1$ and $f(x_0)$ and $f(x_1)$ are the opposite signs
+so that $f(x_0)*f(x_1)<0$ IE, the curve crosses the x-axis between $x_0$ and $x_1$
+and the desire root of the given equation is approximately,
+\begin{tcolorbox}
+\begin{align*}
+           x_2 &= \frac{x_0+x_1}{2}\\
+           x_3 &= \frac{x_0+x_2}{2},\text{provided $f(x_0)*f(x_2)<0$}\\
+               &= \frac{x_1+x_2}{2},\text{provided $f(x_1)*f(x_2)<0$}\\
+  Further\ x_4 &= \frac{x_0+x_3}{2},\text{provided $f(x_0)*f(x_3)<0$}\\
+  \text{and so on\dots}
+\end{align*}
+\end{tcolorbox}
+Thus on each iteration, we either find the root with desired accuracy or we narrow down the range to half of the previous interval.
+%}}}
+
+\section{Newton Raphson Method}
+The Newton Raphson Method is referred to as one of the most commonly
+used techniques for finding the roots of given equations. It can be
+efficiently generalised to find solutions to a system of equations.
+Moreover, we can show that when we approach the root, the method is
+quadratically convergent. In this article, you will learn how to use the
+Newton Raphson method to find the roots or solutions of a given equation,
+and the geometric interpretation of this method.
+\subsection{Newton Raphson Formula}
+Let, $x_{0}$ be an approximate value of a root of the
+equation $f(x)=0$ and let $(x_{0}+h)$ be the exact value of the
+corresponding root where h is very small quantity. Then $f(x_0+h)=0$
+
+Since $x_0+h$ is the root of the equation, $f(x)=0$ by the taylor
+series, we can write,
+\begin{equation*}
+  f(x_0+h)=f(x_0)+hf'(x_0)+\frac{h}{2!}f"(x_0)+\dots = 0
+\end{equation*}
+where h is very small. Neglecting the 2\textsuperscript{nd} and higher
+order terms and taking the first approximation, we get
+\begin{align*}
+  f(x_0)+hf'(x_0)&=0\\
+  \Rightarrow h &= \frac{-f(x_0)}{f'(x_0)}, \text{provided } f'(x_0)\ne 0
+\end{align*}
+
+\vskip20pt
+
+\begin{center}
+  \centering
+  \textbf{\underline{ 1\textsuperscript{st} approximation }}
+\end{center}
+\begin{equation*}
+  x_1=x_0+h=x_0-\frac{f(x_0)}{f'(x_0)}
+\end{equation*}
+
+\vskip10pt
+\begin{center}
+  \textbf{\underline{ 2\textsuperscript{nd} approximation }}
+\end{center}
+  \begin{equation*}
+    x_2=x_1-\frac{f(x_1)}{f'(x_2)}
+  \end{equation*}
+
+\end{document}

@@ -1,0 +1,14 @@
+- General terminology used for naming
+	- variables
+	- functions
+	- arrays
+	- methods
+	- package
+	- constants
+	 *and more...*
+- These are user-defined but these need to follow some special criteria. These are:
+	- These must have character \[A-Z\] or \[a-z\] or numbers \[0-9\], and underscore(\_)  or a dollar sign ($).
+		- @example is not valid as @ is an invalid symbol.
+	- There should not be any space in an identifier.
+	- Should not contain numbers at start.
+	- Cannot be a reserved keyword.

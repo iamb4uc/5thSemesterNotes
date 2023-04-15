@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Greatest Number Finder
+    </title>
+  </head>
+  <body>
+      Enter numbers:
+      <input type="text" id="numbersInput" />
+      <br>
+      <br>
+      <input type="button" value="Find Greatest" onclick="findGreatest()">
+    <script>
+      function findGreatest() {
+        var input = document.getElementById("numbersInput").value;
+        var numbers = input.split(" ").map(function(item) {
+          return parseInt(item, 10);
+        });
+        var greatest = numbers[0];
+        for (var i = 1; i < numbers.length; i++) {
+          if (numbers[i] > greatest) {
+            greatest = numbers[i];
+          }
+        }
+        alert("The greatest number is " + greatest);
+      }
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,22 @@
+<html>
+<body>
+<p align="center">
+<table border="1">
+	<tr><td>Enter the Number</td><td><input id="n1"></td></tr>
+	<tr><td><button onclick="fct()">Find Factorial</button></td>
+	</tr>
+</table>
+</p>
+<script type="text/javascript">
+	function fct()
+	{
+		var f,n,i;
+		n=document.getElementById("n1").value;
+		for(i=1,f=1;i<=n;i++)
+			f=f*i;
+		
+		alert("The factorial is " +f);
+	}
+</script>
+</body>
+</html>

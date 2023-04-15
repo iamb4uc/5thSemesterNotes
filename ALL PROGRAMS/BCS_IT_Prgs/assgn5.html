@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p align="center">
+	<table border="1">
+		<tr>
+			<td>Enter Number of Years</td>
+			<td><input type="text" id="n"></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="btn" onclick="calc()" value="Compute the amount"></td>
+		</tr>
+	</table>
+</p>
+<script type="text/javascript">
+	function calc()
+	{
+		var p,r,t,si;
+		p=1000;
+		r=5;
+		t=document.getElementById("n").value;
+		si=(p*r*t)/100;
+		document.write("The amount is "+si);
+	}
+</script>
+</body>
+</html>

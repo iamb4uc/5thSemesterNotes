@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Question 5
+    </title>
+  </head>
+  <body>
+    Enter number of years::::::::::<br>
+    <input id="n">
+
+    <input type="button" value="Compute interest and amount " onclick="avg()">
+    <script>
+        function avg() {
+            var t = parseInt(document.getElementById("n").value);
+            for (var i = 1; i <= t; i++) {
+                var interest = parseInt((1000 * 5 * i) / 100);
+            document.write("Interest after " + i + " year is :<b>" + interest + "</b> and total amount after " + i + " years" + " becomes:<b>" + (interest + 1000) + "</b><br>")
+            }
+        }
+    </script>
+  </body>
+</html>

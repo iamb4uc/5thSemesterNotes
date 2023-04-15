@@ -1,0 +1,4 @@
+- Just like regular variables but
+	- Once declared, their values cannot be changed by the program.
+- Also called as literals.
+- These may belong to any data-type

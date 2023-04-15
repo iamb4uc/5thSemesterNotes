@@ -1,0 +1,97 @@
+\documentclass[a4paper, 12pt]{scrarticle}
+
+\usepackage{fullpage}
+  \linespread{1.2}
+\usepackage[sc]{mathpazo}
+\usepackage{titlesec}
+\titleformat{\part}[block]{\LARGE\scshape}{}{0em}{}
+\titleformat{\section}[block]{\Large\scshape}{}{0em}{}
+\titleformat{\subsection}[block]{\large\bfseries}{}{0em}{}
+\titleformat{\subsubsection}[block]{\bfseries}{}{0em}{}
+
+% \pagenumbering{gobble}
+
+\begin{document}
+\section{Explain command line arguments with program}
+Command line arguments are arguments that is passed at the time of run-time. Here, the arguments that the user passes can be received by the Java program as an input. 
+
+Command line arguments provides a convenient way to check the behavior of the program for the different values. We can pass N(1, 2, 3, \dots) numbers of arguments from the command prompt.
+
+
+\subsection{Program:::}
+\begin{verbatim}
+package assignment;
+
+public class cmdArg {
+  public static void main(String[] args) {
+    int cnt, i = 0, n, s =0;
+    cnt = args.lenght;
+    while (i < cnt) {
+      n = Integer.parseInt(args[i]);
+      s = s + n;
+      i++;
+    }
+    Syatem.out.println("The sum of interger is " + s);
+  }
+}
+\end{verbatim}
+
+\section{Typecasting in Java}
+Typecasting is the process that converts a datatype into another datatype in both ways, manually and automatically.
+
+Automatic conversion is done by the compiler and manual conversion performed by the programmer.
+
+\subsection{Types of Typecasting}
+\subsubsection{Implicit typecasting}
+This type of typecasting is automatically performed by the compiler and it converts a lower datatype into a higher one. This process is also called widening casting and is very safe as there is no chance of loss of data. Implicit typecasting takes place when both datatypes are compatible with each
+other. Target type must be larger than the source  type.
+
+This type of type casting follows the following hierarchical order:
+
+\begin{verbatim}
+byte -> short -> char -> int -> long -> float -> double
+\end{verbatim}
+
+\subsubsection{Explicit typecasting}
+This type of typecasting is manually performed by the programmer and helps convert higher datatypes into lower ones. This process is also known as narrowing typecasting and if we do not perform casting properly, then the compiler reports a compile-time error.
+
+This type of type casting follows the following hierarchical order:
+
+\begin{verbatim}
+double -> float -> long -> int -> char -> short -> byte  
+\end{verbatim}
+
+\section{StringBuffer class}
+It is used to create and manipulate strings and is similar to the String class but it is mutable i.e. the values can be changed after it is created. StringBuffer class can be thought of as a container for a collection of characters.
+
+In this we can add characters to the container, remove characters from the container and change the order of the characters in the container.
+
+StringBuffer is  used in situation where a large number of modifications are to be made to a string or where the performance is crucial as StringBuffer is mutable and thread-safe, unlike String which is immutable and not thread-safe.
+
+
+\section{StringTokenizer}
+StringTokenizer is the class in Java that is used to split a string into a series of tokens. In java, token is a sequence of characters that is considered to be single unit.
+
+For example, consider the following sentence: \emph{"This is a string."}
+
+We can sue the StringTokenizer class to split this sentence into individual words, which are the tokens.
+
+Here is an example of how you can use the StringTokenizer class to split a string into tokens:
+
+\begin{verbatim}
+String sentence = "This is a string.";
+StringTokenizer tokenizer = new StringTokenizer(sentence);
+
+while (tokenizer.hasMoreTokens()) {
+  String token = tokenizer.nextToken();
+  System.out.println(token);
+}
+\end{verbatim}
+Here, 
+\begin{enumerate}
+  \item StringTokenizer object is created
+  \item hasMoreTokens() method is used to check if there are more tokens to be processed.
+  \item nextToken() is used to retrieve the next token.
+\end{enumerate}
+
+\end{document}

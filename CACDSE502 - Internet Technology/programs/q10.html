@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <script>
+      var keywords = ["Moinak", "Masuk", "Srijani", "Swapnil"];
+      var sentence = ["Hello, I am Swapnil and my friends are Masuk, Moinak and Srijani"];
+                      const matched = [];
+      for (var index = 0; index < sentence.length; index++) {
+        for (var outerIndex = 0; outerIndex < keywords.length; outerIndex++) {
+          if (sentence[index].includes(keywords[outerIndex])) {
+            matched.push(keywords[outerIndex]);
+          }
+        }
+      }
+      document.write("The matched elements are:-"+matched);
+    </script>
+  </body>
+</html>
+

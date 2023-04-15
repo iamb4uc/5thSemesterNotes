@@ -1,0 +1,8 @@
+- Difference between JDK JVM and JRE
+- Typecasting
+- Class definition
+- Constructor vs Method
+- Print "Hello World".
+- Scanner class
+- [[final Keyword vs this Keyword]]
+- [[How can we pass an object as a function argument]]

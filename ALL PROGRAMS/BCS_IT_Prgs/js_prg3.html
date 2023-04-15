@@ -1,0 +1,29 @@
+<html>
+<body>
+<p align="center">
+<table border="1">
+<tr><td>Enter the Number to Check</td><td><input id="n1"></td></tr>
+<tr align="center">
+<td><button type="button" onclick="check()">Submit
+</button>
+</td></tr></table></p>
+<script type="text/javascript">
+	function check()
+	{
+		var n;
+		
+		n=parseInt(document.getElementById("n1").value);
+		if(n%2==0)
+		{
+			alert("Number is even");
+
+		}
+		else
+		{
+			alert("Number is odd");
+		}
+	}
+
+</script>
+</body>
+</html>

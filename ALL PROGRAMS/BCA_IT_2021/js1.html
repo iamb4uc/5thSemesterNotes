@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Java Script program</title>
+</head>
+<body>
+Enter the First Number<input type="text" id="n1"><br>
+Enter the Second Number<input type="text" id="n2"><br>
+<input type="button" name="btn" value="Add" onclick="add()">
+<script type="text/javascript">
+	function add()
+	{
+		var a,b,c;
+	a=parseInt(document.getElementById('n1').value);
+	b=parseInt(document.getElementById('n2').value);
+	c=a+b;
+	document.getElementById('p1').innerHTML="The result is "+c;
+	}
+</script>
+<p id="p1"> </p>
+</body>
+</html>

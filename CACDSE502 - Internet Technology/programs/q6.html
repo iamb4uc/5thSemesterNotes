@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Java Script program to display a character string in the reverse order.
+    </title>
+  </head>
+
+
+  <body>
+  <script>
+    function textrev() {
+      let concatArr = "";
+      input = document.getElementById("textinput").value;
+      for(var i = input.length-1; i >= 0; i--) {
+        concatArr = concatArr + input[i];
+      }
+      document.getElementById("output").innerHTML = concatArr;
+    }
+  </script>
+  Enter the text: <input type="text" id="textinput" />
+    <input type="button" id="button" onclick="textrev()" value="Reverse" />
+    <h1 id="output"></h1>
+  </body>
+</html>

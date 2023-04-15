@@ -1,0 +1,29 @@
+<html>
+<body>
+
+
+Enter First number<input id="n1"><br>
+Enter Second number<input id="n2"><br>
+
+<button type="button" onclick="add()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function add() {
+  var x1,x2,x;
+
+  x1 = document.getElementById("n1").value;
+  x2 = document.getElementById("n2").value;
+  
+  x=parseInt(x1)+parseInt(x2);
+  document.getElementById("demo").innerHTML = "The result is "+x;
+  
+  
+    
+  
+}
+</script>
+
+</body>
+</html> 

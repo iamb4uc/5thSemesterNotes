@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Question Number 3
+    </title>
+  </head>
+
+<body>
+    <script type="text/javascript">
+        function factorial() {
+            var n, f;
+            f = 1;
+            n = parseInt(document.getElementById("num").value);
+            for (var i = 1; i <= n; i++) {
+                f = f * i;
+            }
+            document.write("The factorial of" + n + " is " + f);
+        }
+    </script>
+
+    Enter Number
+    <br>
+    <input type="text" id="num">
+    <br>
+    <br>
+    <input type="button" value="Calculate" onclick="factorial()">
+
+</body>
+
+</html>

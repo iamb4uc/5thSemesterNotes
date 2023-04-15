@@ -1,0 +1,25 @@
+<html>
+<body>
+<p align="center">
+<table border="1">
+	<tr><td>Enter the Number</td><td><input id="n"></td></tr>
+	<tr><td><button onclick="cnt()">Count</button></td>
+	</tr>
+</table>
+</p>
+<script type="text/javascript">
+	function cnt()
+	{
+		var a,c;
+		c=0;
+		a=document.getElementById("n").value;
+		while(a>0)
+		{
+			c=c+1;
+			a=parseInt(a/10);
+		}
+		alert("The number of digit  is " +c);
+	}
+</script>
+</body>
+</html>

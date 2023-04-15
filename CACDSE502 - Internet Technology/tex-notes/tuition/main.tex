@@ -1,0 +1,1025 @@
+\documentclass[a4paper]{article}
+
+% Packages{{{
+  \usepackage[margin=1.2in]{geometry}                         % Margins
+    \linespread{1.2}                                          % Increases line spacing
+  \usepackage{graphicx}                                       % Image Support
+    \graphicspath{ {./images/} }                              % Path to image directory
+  \usepackage{color}                                          % Colors for stuff
+  \usepackage[dvipsnames]{xcolor}                             % Extra-Colors
+  \usepackage{soul}                                           % Provides Highlight feature
+  \usepackage{fancyhdr}                                       % Fancy Header and footer
+  \usepackage{amsmath}                                        % Math support
+  \usepackage{amssymb}                                        % Extended symbols for math
+  \usepackage{todonotes}                                        % Extended symbols for math
+  \usepackage{listings}                                       % Code-snippet support
+    \lstset{                                                % lst-format-config
+      frame=tb,
+      language=HTML,
+      aboveskip=3mm,
+      belowskip=3mm,
+      showstringspaces=false,
+      columns=flexible,
+      basicstyle=\ttfamily,
+      numbers=none,
+      numberstyle=\scriptside\color{Gray},
+      keywordstyle=\color{BlueViolet}\slshape,
+      commentstyle=\color{ForestGreen},
+      stringstyle=\color{Red},
+      breaklines=true,
+      breakatwhitespace=true,
+      tabsize=4
+    }
+  \usepackage{caption}                                      % Caption support
+  \usepackage[utf8]{inputenc}                               % utf encoding
+  \usepackage{hyperref}
+    \hypersetup{pdfnewwindow=true, colorlinks=false}
+%}}}
+
+% Footer section {{{
+  % Creates footer{{{
+  \pagestyle{fancy}%
+  \fancyhf{}%
+  \lfoot{Swapnil}%
+  \cfoot{iamb4uc.xyz}%
+  \rfoot{Page \thepage}%
+  \renewcommand{\headrulewidth}{0pt}% Line at the head invisible
+  \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible}}}
+
+  % Redefine the plain page style for chapter pages{{{
+  \fancypagestyle{plain}{%
+    \fancyhf{}%
+    \fancyfoot[L]{Swapnil}%
+    \fancyfoot[C]{iamb4uc.xyz}%
+    \fancyfoot[R]{Page \thepage}%
+    \renewcommand{\headrulewidth}{0pt}% Line at the head invisible
+    \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+  }%}}}
+% }}}
+
+% Title {{{
+\title{\Huge{\emph{Internet Technology}} \normalsize{Tuition Notes}}
+\author{by \huge{\emph{Swapnil}} \normalsize{written in {\LaTeX}}}
+\date{}
+% }}}
+
+\begin{document}
+%Title page{{{
+  \maketitle
+  \thispagestyle{empty}
+%}}}
+
+% ToC{{{
+\setcounter{tocdepth}{3}
+\tableofcontents
+\pagebreak
+%}}}
+% -----------------------------------------------------------------------------
+\parindent0pt
+
+\part{Unit 2}%{{{
+  \subsection{What is markup language?}%{{{
+  A computer language that consists of easily understood keywords,
+  names, or tags that help format the overall view of a page and 
+  the data it contains. Some examples of a markup language are BBC, 
+  HTML, SGML, and XML.%}}}
+
+  \subsection{What is HTML? Features of HTML.}%{{{
+  The Hyper-Text-Markup-Language or HTML is the standard markup
+  language for documents designed to be displayed in a web browser.
+  It can be assisted by technologies such as cascading stylesheets
+  and scripting languages such as JavaScript. HTML describes the
+  structure of a webpage. HTML consist of a series of elements.
+  HTML elements tell the browser how to display the content or HTML
+  is the standard markup language for documents designed to be
+  displayed in a web browser. It can be assisted by technologies such
+  as cascading stylesheets and scripting languages such as JavaScript.
+  HTML describes the structure of a webpage. HTML consist of a series
+  of elements. HTML elements tell the browser how to display the content.%}}}
+
+  \subsection{Difference between HTML and DHTML.}%{{{
+  Following are the difference between HTML and DHTML:
+
+  \begin{itemize}
+    \item DHTML is a collection of technologies while HTML is a markup
+      language.
+    \item DHTML creates dynamic webpages where as HTML creates static
+      webpages.
+    \item DHTML allows including small animations and dynamic menus
+      but HTML does not.
+    \item DHTML uses events, methods, properties to insulate dynamism in 
+      HTML page.
+    \item DHTML is basically using JavaScript and stylesheets in an HTML
+      page.
+    \item DHTML sites will be fast enough upon client-side technologies
+      while HTML sites will be slow upon client-side technologies.
+    \item DHTML may contained server-side code while HTML cannot have any
+      server-side code.
+  \end{itemize}%}}}
+
+
+  \subsection{Different HTML tags}%{{{
+  \begin{enumerate}
+    \item \texttt{<a>}: It is termed as anchor tag and it creates a hyperlink
+      or link.
+    \item \texttt{<abbr>}: It defines an abbreviation for a phrase or longer
+      word.
+    \item \texttt{<acronym>}: It defines acronym for a word.
+      (Not supported in HTML5)
+    \item \texttt{<address>}: It defines the author's contact information of
+      the HTML article
+    \item \texttt{<applet>}: It defines an embedded Java applet.
+      (Not supported in HTML5)
+    \item \texttt{<area>}: It defines the area of an image map.
+    \item \texttt{<article>}: It defines the self-contained content.
+    \item \texttt{<aside>}: It defines content aside from main content. 
+      Mainly represented as sidebar.
+    \item \texttt{<audio>}: It is used to embed sound content in HTML document.
+    \item \texttt{<b>}: It is used to make a text bold.
+    \item \texttt{<base>}: This tag defines the base URL for all relative URL
+      within the document.
+    \item \texttt{<basefont>}: This tag is used to set default font, size and
+      color for all elements of document. (Not supported in HTML5)
+    \item \texttt{<bdi>}: This tag is used to provide isolation for that part
+      of text which may be formatted in different directions from its 
+      surrounding text.
+    \item \texttt{<bdo>}: It is used to override the current text direction.
+    \item \texttt{<big>}: This tag is used to make font size one level larger
+      than its surrounding content. (Not supported in HTML5)
+    \item \texttt{<blockquote>}: It is used to define a content which is taken
+      from another source.
+    \item \texttt{<body>}: It is used to define the body section of an HTML
+      document.
+    \item \texttt{<br>}: It is used to apply single line break.
+    \item \texttt{<button>}: It is used to represent a clickable button
+    \item \texttt{<canvas>}: It is used to provide a graphics space within a 
+      web document.
+    \item \texttt{<caption>}: It is used to define a caption for a table.
+    \item \texttt{<center>}: It is used to align the content in center.
+      (Not supported in HTML5)
+    \item \texttt{<cite>}: It is used to define the title of the work, book,
+      website, etc.
+    \item \texttt{<code>}: It is used to display a part of programming code in
+      an HTML document.
+    \item \texttt{<col>}: It defines a column within a table which represent 
+      common properties of columns and used with the \texttt{<colgroup>}
+      element.
+    \item \texttt{<colgroup>}: It is used to define group of columns in a 
+      table.
+    \item \texttt{<data>}: It is used to link the content with the
+      machine-readable translation.
+    \item \texttt{<datalist>}: It is used to provide a predefined list for 
+      input option.
+    \item \texttt{<dd>}: It is used to provide definition/description of a 
+      term in description list.
+    \item \texttt{<del>}: It defines a text which has been deleted from the 
+      document.
+    \item \texttt{<details>}: It defines additional details which user can
+      either view or hide.
+    \item \texttt{<dfn>}: It is used to indicate a term which is defined
+      within a sentence/phrase.
+    \item \texttt{<dialog>}: It defines a dialog box or other interactive
+      components.
+    \item \texttt{<dir>}: It is used as container for directory list of files.
+      (Not supported in HTML5)
+    \item \texttt{<div>}: It defines a division or section within HTML 
+      document.
+    \item \texttt{<dl>}: It is sued to define a description list.
+    \item \texttt{<dt>}: It is used to define a term in description list.
+    \item \texttt{<em>}: It is used to emphasis the content applied within 
+      this element.
+    \item \texttt{<embed>}: It is used as embedded container for external 
+      file/application/media, etc.
+    \item \texttt{<fieldset>}: It is used to group related elements/labels 
+      within a web form.
+    \item \texttt{<figcaption>}: It is used to add a caption or explanation 
+      for the <figure> element.
+    \item \texttt{<figure>}: It is used to define the self-contained content, 
+      and s mostly refer as single unit.
+    \item \texttt{<font>}: It defines the font, size, color, and face for 
+      the content. (Not supported in HTML5)
+    \item \texttt{<footer>}: It defines the footer section of a webpage.
+    \item \texttt{<form>}: It is used to define an HTML form.
+    \item \texttt{<frame>}: It defines a particular area of webpage which 
+      can contain another HTML file. (Not supported in HTML5)
+    \item \texttt{<frameset>}: It defines group of Frames. 
+      (Not supported in HTML5)
+    \item \texttt{<h1> to <h6>}: It defines headings for an HTML 
+      document from level 1 to level 6.
+    \item \texttt{<head>}: It defines the head section of an HTML document.
+    \item \texttt{<header>}: It defines the header of a section or webpage.
+    \item \texttt{<hr>}: It is used to apply thematic break between 
+      paragraph-level elements.
+    \item \texttt{<html>}: It represents root of an HTML document.
+    \item \texttt{<i>}: It is used to represent a text in some different voice.
+    \item \texttt{<iframe>}: It defines an inline frame which can embed other 
+      content.
+    \item \texttt{<img>}: It is used to insert an image within an HTML 
+      document.
+    \item \texttt{<input>}: It defines an input field within an HTML form.
+    \item \texttt{<ins>}: It represent text that has been inserted within 
+      an HTML document.
+    \item \texttt{<isindex>}: It is used to display search string for 
+      current document. (Not supported in HTML5)
+    \item \texttt{<kbd>}: It is used to define keyboard input.
+    \item \texttt{<label>}: It defines a text label for the input field of
+      form.
+    \item \texttt{<legend>}: It defines a caption for content of 
+      \texttt{<fieldset>}
+    \item \texttt{<li>}: It is used to represent items in list.
+    \item \texttt{<link>}: It represents a relationship between current 
+      document and an external resource.
+    \item \texttt{<main>}: It represents the main content of an HTML document.
+    \item \texttt{<map>}: It defines an image map with active areas.
+    \item \texttt{<mark>}: It represents a highlighted text.
+    \item \texttt{<marquee>}: It is used to insert the scrolling text or an 
+      image either horizontally or vertically. (Not supported in HTML5)
+    \item \texttt{<menu>}: It is used for creating a menu list of commands.
+    \item \texttt{<meta>}: It defines metadata of an HTML document.
+    \item \texttt{<meter>}: It defines scalar measurement with known range 
+      or fractional value.
+    \item \texttt{<nav>}: It represents section of page to represent
+      navigation links.
+    \item \texttt{<noframes>}: It provides alternate content to represent in 
+      browser which does not support the <frame> elements. (Not supported in
+      HTML5)
+    \item \texttt{<noscript>}: It provides an alternative content if a script 
+      type is not supported in browser.
+    \item \texttt{<object>}: It is used to embed an object in HTML file.
+    \item \texttt{<ol>}: It defines an ordered list of items.
+    \item \texttt{<optgroup>}: It is used to group the options of a drop-down 
+      list.
+    \item \texttt{<option>}: It is used to define options or items in a 
+      drop-down list.
+    \item \texttt{<output>}: It is used as container element which can show 
+      result of a calculation.
+    \item \texttt{<p>}: It represents a paragraph in an HTML document.
+    \item \texttt{<param>}: It defines parameter for an <object> element
+    \item \texttt{<picture>}: It defines more than one source element and 
+      one image element.
+    \item \texttt{<pre>}: It defines preformatted text in an HTML document.
+    \item \texttt{<progress>}: It defines the progress of a task within HTML 
+      document.
+    \item \texttt{<q>}: It defines short inline quotation.
+    \item \texttt{<rp>}: It defines an alternative content if browser does 
+      not supports ruby annotations.
+    \item \texttt{<rt>}: It defines explanations and pronunciations in ruby 
+      annotations.
+    \item \texttt{<ruby>}: It is used to represent ruby annotations.
+    \item \texttt{<s>}: It render text which is no longer correct or relevant.
+    \item \texttt{<samp>}: It is used to represent sample output of a computer
+      program.
+    \item \texttt{<script>}: It is used to declare the JavaScript within HTML
+      document.
+    \item \texttt{<section>}: It defines a generic section for a document.
+    \item \texttt{<select>}: It represents a control which provides a menu
+      of options.
+    \item \texttt{<small>}: It is used to make text font one size smaller
+      than document's base font size.
+    \item \texttt{<source>}: It defines multiple media recourses for different
+      media element such as \texttt{<picture>}, \texttt{<video>}, and
+      \texttt{<audio>} element.
+    \item \texttt{<span>}: It is used for styling and grouping inline.
+    \item \texttt{<strike>}: It is used to render strike through the text.
+      (Not supported in HTML5)
+    \item \texttt{<strong>}: It is used to define important text.
+    \item \texttt{<style>}: It is used to contain style information for
+      an HTML document.
+    \item \texttt{<sub>}: It defines a text which displays as a 
+      subscript text.
+    \item \texttt{<summary>}: It defines summary which can be used
+      with <details> tag.
+    \item \texttt{<sup>}: It defines a text which represent as
+      superscript text.
+    \item \texttt{<svg>}: It is used as container of SVG
+      (Scalable Vector Graphics).
+    \item \texttt{<table>}: It is used to present data in tabular form
+      or to create a table within HTML document.
+    \item \texttt{<tbody>}: It represents the body content of an HTML
+      table and used along with <thead> and <tfoot>.
+    \item \texttt{<td>}: It is used to define cells of an HTML table
+      which contains table data
+    \item \texttt{<template>}: It is used to contain the client side
+      content which will not display at time of page load and may render
+      later using JavaScript.
+    \item \texttt{<textarea>}: It is used to define multiple line input,
+      such as comment, feedback, and review, etc.
+    \item \texttt{<tfoot>}: It defines the footer content of an HTML table.
+    \item \texttt{<th>}: It defines the head cell of an HTML table.
+    \item \texttt{<thead>}: It defines the header of an HTML table.
+      It is used along with \texttt{<tbody>} and \texttt{<tfoot>} tags.
+    \item \texttt{<time>}: It is used to define data/time within an 
+      HTML document.
+    \item \texttt{<title>}: It defines the title or name of an HTML document.
+    \item \texttt{<tr>}: It defines the row cells in an HTML table
+    \item \texttt{<track>}: It is used to define text tracks for
+      \texttt{<audio>} and \texttt{<video>} elements.
+    \item \texttt{<tt>}: It is used to define teletype text.
+      (Not supported in HTML5)
+
+    \item \texttt{<u>}: It is used to render enclosed text with an underline.
+    \item \texttt{<ul>}: It defines unordered list of items.
+
+    \item \texttt{<var>}: It defines variable name used in mathematical
+      or programming context.
+    \item \texttt{<video>}: It is used to embed a video content with an 
+      HTML document
+
+    \item \texttt{<wbr>}: It defines a position within text where breakline
+      is possible.
+  \end{enumerate}%}}}
+
+  \subsection{What is a webpages?}%{{{
+  A webpage is a document, commonly written in HTML, that is viewed
+  in an internet browser. A webpage can be accessed by entering a URL
+  address into a browser's address bar. A webpage may contain text,
+  graphics and hyperlinks to other webpages and files.%}}}
+
+  \subsection{What is a website?}%{{{
+  A website is a collection of web pages and related content that 
+  is identified by a common domains name and published on at least
+  one webserver.%}}}
+
+  \subsection{Difference between webpages, websites and webservers}%{{{
+  \textbf{Webpages}: A document which can be displayed in a web browser
+  such as Mozzila Firefox, Google Chrome, Opera, Microsoft Edge, Apple 
+  Safari. These are also often called just `pages'.
+
+  \textbf{Website}: A collection of webpages which are grouped together
+  and usually connected together in various ways. Often called a `website'
+  or a `site'.
+
+  \textbf{Webserver}: A computer that hosts a website on the internet.%}}}
+
+  \subsection{What are HTML tags}%{{{
+  HTML tags are the hiddent keyword within a webpages that define how
+  our web browser must format and display the content. Most tags must
+  have two parts:
+
+  \begin{enumerate}
+    \item An openning
+    \item A closing part
+  \end{enumerate}
+
+  \texttt{<html>} is the openning tag and \texttt{</html>} is a closing
+  tag. An opening tag begins a section of page content, and a closing 
+  tag ends it.%}}}
+
+  \subsection{DHTML}%{{{
+  It is a collection of technologies used together to create interactive
+  and animated website by using a combination of a static markup language
+  such as HTML, a client-side scripting language such as Javascript, 
+  VBScript etc., a presentation defination language such as CSS (\emph
+  {cascading style sheets}) and the document object model (\emph
+  {DOM})
+
+  The application of DHTML was introduced by microsoft with the release
+  of internet explorer 4.
+
+  DHTML allows scripting languages to change variables in a web page's 
+  definition language, which in turn affects the look and function of 
+  otherwise "static" HTML page content after the page has been fully 
+  loaded and during the viewing process. Thus the dynamic characteristic 
+  of DHTML is the way it functions while a page is viewed, not in its 
+  ability to generate a unique page with each page load.
+    \subsubsection{Features}
+    DHTML allows authors to add effects to their pages that are otherwise
+    difficult to achieve by changing the document object model (\emph{DOM})
+    and page style. The combination of HTML, CSS and Javascript offers
+    ways to:
+    \begin{itemize}
+      \item Animate text and images in their documents.
+      \item Embedded a ticker or other dynamic display that automatically
+        refreshes its content with the latest news, stocks, quotes or 
+        other data.
+      \item Use a form to capture user input and then process verify
+        and respond to that data without having to send data back to the 
+        server.
+      \item It is used for real time positioning, dynamic fonts.
+      \item Include rollover buttons or drop-down menu's.
+      \item It is used for data binding.
+    \end{itemize}%}}}
+
+  \subsection{Difference between HTML and XML}%{{{
+  \begin{center}
+    \begin{tabular}{l|l|l|}
+    \cline{2-3}
+                   &
+      \textbf{XML} &
+      \textbf{HTML} \\ 
+      \hline
+
+       
+    \multicolumn{1}{|l|}{\textit{1}} &
+      \begin{tabular}[c]{@{}l@{}}
+        It stores and transports\\ 
+        data. 
+      \end{tabular}&
+
+      It displays data. \\ 
+      \hline
+
+
+    \multicolumn{1}{|l|}{\textit{2}} &
+      It uses user-defined tags. &
+
+      It uses predefined tags. \\ 
+      \hline
+
+
+    \multicolumn{1}{|l|}{\textit{3}} &
+      It contains structural data. &
+
+      \begin{tabular}[c]{@{}l@{}}
+      It does not contains any \\ 
+      structural data.
+      \end{tabular} \\ 
+      \hline
+
+
+    \multicolumn{1}{|l|}{\textit{4}} &
+      \begin{tabular}[c]{@{}l@{}}
+      It can distinguish upper case\\ 
+      and lower case letter.
+      \end{tabular} &
+
+      \begin{tabular}[c]{@{}l@{}}
+      It cannot distinguish upper\\ 
+      case and lower case letter.
+      \end{tabular} \\ 
+      \hline
+
+
+    \multicolumn{1}{|l|}{\textit{5}} &
+      \begin{tabular}[c]{@{}l@{}}
+      It maintains spacing, tabs, \\ 
+      new lines, and any other white\\ 
+      space formatting.
+      \end{tabular} &
+
+      \begin{tabular}[c]{@{}l@{}}
+      It does not maintains white\\ 
+      space.
+      \end{tabular} \\ 
+      \hline
+
+    \end{tabular}%
+  \end{center}
+    %}}}
+
+  \subsection{Stylesheets}%{{{
+  A web style sheet is a form of separation of presentation and content
+  for web design in which the markup of a webpage contains the page's 
+  semantic content and structure but does not defines its visual layout.
+  It is a collection of style rule that tells a browser how the various 
+  styles are to be applied to the HTML tags to present the document.
+
+  There are three types of stylesheets which are given below:
+  \begin{itemize}
+    \item \textbf{Inline Stylesheet}:
+
+      Inline stylesheets contains the 
+      stylesheet property in the body section attached with element
+      is known as inline stylesheet. This kind of stye is specified
+      within an HTML tag using the style attribute.
+
+    \item \textbf{Internal or Embedded Stylesheet}:
+
+      This can be used when a single HTML document must be styled 
+      uniquely. The stylesheet rule set should be within the HTML file in 
+      the head section i.e. the stylesheet
+
+      
+  \end{itemize}
+
+    \subsubsection{CSS}
+    Cascading style sheets, fondly referred to as CSS, is a simply 
+    designed language, intended to simplify the process of making 
+    web pages presentable. CSS allows you to apply styles to webpages.
+    More importantly, CSS enables you to do this independent of the 
+    HTML that makes up each webpage.
+      \subsection{Features}
+      \begin{enumerate}
+        \item CSS saves time
+        \item Easy Maintenance
+        \item Search Engines
+        \item Superior styles to HTML
+        \item Offline Browsing.
+      \end{enumerate}%}}}
+
+  \subsection{How to format text using CSS?}%{{{
+  CSS allows us to format text to create visually appealing contents
+  The following properties are used to style text using CSS.
+  \textit{For example}:
+  \begin{itemize}
+    \item \texttt{text-color}
+    \item \texttt{text-alignment}
+    \item \texttt{letterspacing}
+    \item \texttt{lineheight}
+    \item \texttt{text-alignment}
+    \item \texttt{text-decoration}
+    \item \texttt{text-indent}
+    \item \texttt{text-shadow}
+    \item \texttt{text-transform}
+    \item \texttt{wordspacing}
+  \end{itemize}%}}}
+
+  \subsection{Design an HTML form which contains text-input controls,%{{{
+  checkbox controls, radio button control. select-box control, file-upload
+  box, button controls.}
+  \begin{lstlisting}
+  \end{lstlisting}%}}}
+
+  \subsection{HTML forms}
+  An HTML form is a section of a document which contains controls such as 
+  text fields, password fields, checkboxes, radio buttons, submit button, 
+  menus etc.
+
+  An HTML form facilitates the user to enter data that is to be sent to the 
+  server for processing such as name, email address, password, phone number,
+  etc.
+
+    \subsubsection{Why we use HTML form?}
+    HTML forms are required if you want to collect some data from of the site 
+    visitor. \textit{Example}: If a user want to purchase some items on 
+    internet, he/she must fill the form such as shipping address and
+    credit/debit card details so that item can be sent to the given address.
+
+    \subsubsection{Syntax of HTML form}
+    HTML form syntax is as follows:
+    \begin{lstlisting}
+    <form>
+      form elements
+    </form>
+    \end{lstlisting}
+
+
+
+%}}}
+
+\pagebreak
+
+\part{Unit 3}%{{{
+  \subsection{Scripting Language} %{{{
+  A scripting language is a programming language for a special run-time
+  environment that automates the execution of tasks; the tasks can 
+  alternative be executed one-by-one by a human operator.
+
+  Scripting languages are:
+  \begin{enumerate}
+    \item Interpreted rather than compiled.
+    \item Used for short scripts over full computer programs.
+  \end{enumerate}%}}}
+
+  \subsection{Different types of scripting languages}%{{{
+  JS, Python, Ruby are all examples of scripting languages.%}}}
+
+  \subsection{Difference between client-side scripting \& %{{{
+  server-side scripting?}
+  \begin{center}
+  
+  \begin{tabular}{lll}
+
+  \multicolumn{1}{c}{\textbf{}} & 
+
+    \multicolumn{1}{c}
+    {\textbf{Client-side-scripting}} &
+
+    \multicolumn{1}{c}
+    {\textbf{Server-side-scripting}}\\
+    \cline{2-3}
+
+
+  \multicolumn{1}{l|}{1} & 
+
+    \multicolumn{1}{l|}
+    {\begin{tabular}[c]{@{}l@{}}
+    Used when the users browser \\
+    already has the code
+    \end{tabular}} & 
+
+    \multicolumn{1}{l|}
+    {Used to create dynamic pages.} \\ 
+    \cline{2-3} 
+
+
+  \multicolumn{1}{l|}{2} & 
+
+    \multicolumn{1}{l|}
+    {\begin{tabular}[c]{@{}l@{}}
+    The web browser executes the \\
+    client side scripting.
+    \end{tabular}} & 
+
+    \multicolumn{1}{l|}
+    {\begin{tabular}[c]{@{}l@{}}
+    The web server executes the server \\ 
+    side scripting
+    \end{tabular}}\\ 
+    \cline{2-3} 
+
+
+  \multicolumn{1}{l|}{3} &
+
+    \multicolumn{1}{l|}
+    {\begin{tabular}[c]{@{}l@{}}
+    Cannot be used to connect to\\ 
+    the databases
+    \end{tabular}} &
+
+    \multicolumn{1}{l|}
+    {\begin{tabular}[c]{@{}l@{}}
+    Used to connect to the databases that \\ 
+    reside on the web server
+    \end{tabular}} \\
+    \cline{2-3} 
+
+
+  \multicolumn{1}{l|}{4} &
+
+    \multicolumn{1}{l|}
+    {\begin{tabular}[c]{@{}l@{}}
+    Can't access the file system that \\ 
+    resides at the web server
+    \end{tabular}} & 
+
+    \multicolumn{1}{l|}
+    {\begin{tabular}[c]{@{}l@{}}
+    Can access the file system residing at\\ 
+    the web server
+    \end{tabular}}\\
+    \cline{2-3} 
+
+
+  \multicolumn{1}{l|}{5} &
+
+    \multicolumn{1}{l|}
+    {\begin{tabular}[c]{@{}l@{}}
+    Response from a client-side script\\
+    is faster as compared to a server-\\
+    side script.
+    \end{tabular}} & 
+
+    \multicolumn{1}{l|}
+    {\begin{tabular}[c]{@{}l@{}}
+    Response from a server-side script is\\ 
+    slower as compared to a client-side\\ 
+    script.
+    \end{tabular}} \\
+    \cline{2-3} 
+
+
+  \multicolumn{1}{l|}{6}&
+
+    \multicolumn{1}{l|}
+    {\begin{tabular}[c]{@{}l@{}}
+    Example of client-side-script are:\\
+    VB Script, WML Script, Python, \\
+    Action Script, etc.
+    \end{tabular}} &
+
+    \multicolumn{1}{l|}
+    {\begin{tabular}[c]{@{}l@{}}
+    Example of server-side-script are:\\
+    ASP, JSP, ASP.net, nodejs, PHP, SSJS,\\
+    etc.\end{tabular}} \\
+    \cline{2-3} 
+
+  \end{tabular}
+  \end{center}
+  %}}}
+
+  \subsection{Advantages of JS}%{{{
+    \subsubsection{Easy to learn}
+    The user can learn to code in scripting languages quickly, not 
+    much knowledge of web technology is required.
+
+    \subsubsection{Faster Editing}
+    It is highly efficient with the limited number of data structures 
+    and variables to use.
+
+    \subsubsection{Interactivity}
+    Helps add visualization interfaces and combinations in web pages.
+
+    Modern web pages demand the use of scripting languages to create 
+    enhanced web pages, fascinated visual description which includes 
+    background and foreground colors and so on.
+
+    \subsubsection{Functionality}
+    There are different libraries which are part of different 
+    scripting languages.
+    They help in creating new applications in web browsers and are 
+    different from normal programming languages.%}}}
+
+  \subsection{JavaScript}%{{{
+  JS is a dynamic computer programming language. It is a light
+  weight and most commonly scripting language as a part of web pages
+  whose implementations allows client side scripts to interact with
+  user and make dynamic pages. JS is an interpreted programming
+  language with the first class functions having object-oriented
+  capabilities.
+    \subsubsection{Features}%{{{
+      \begin{enumerate}
+        \item \textbf{Speed}: Since JS is able to run in real-time 
+          withing the client-side browser, it is very fast. Unless
+          outside resources are required, JS is unhindered by 
+          network called to a backend server.
+        \item \textbf{Simplicity}: Relatively simple to learn 
+          and implement.
+        \item \textbf{Popularity}: JS is used everywhere on the 
+          web.
+        \item \textbf{Interoperability}: Plays nicely with other 
+          languages and can be used in huge variety of applications.
+        \item \textbf{Server Load}: Being client-side reduces the
+          demand on the website server.
+      \end{enumerate}%}}}
+
+    \subsubsection{JavaScript variable}%{{{
+    JS variables are containers for string data values. JS variables
+    can be declared with the help of `\texttt{var}' keyword.
+
+    \emph{Example}
+    \begin{lstlisting}
+      var x = 5;
+      var y = 6;
+      var z = x+y;
+    \end{lstlisting}%}}}
+
+    \subsubsection{JavaScript expression}%{{{
+    An expression is a valid unit of code that resolves to a value.
+    There are two types of expressions: those that have side effects
+    (such as assigning values) and those that purely evaluate.%}}}
+
+    \subsubsection{Different JavaScript operators?}%{{{
+    JavaScript operators are symbols that are used to perform 
+    operations on operands.
+
+    \textit{Example}
+    \begin{lstlisting}
+      var sum = 10 + 20;
+    \end{lstlisting}
+    Here `\texttt{+}' is the arithmetic operator and `\texttt{=}' is the assignment operator.
+
+    Different types of operators used in JavaScript:
+    \begin{enumerate}
+      \item \textbf{Arithmetic Operators}:
+        \verb|+, -, *, /, ++, --, etc.|
+      \item \textbf{Comparison Operators (Relational Operators)}:
+        \verb|==, <, >, <=, >=, !=, etc.|
+    
+      \item \textbf{Bitwise Operators}:
+        \verb+&, |, ^, ~, <<, >>, etc.+
+    
+      \item \textbf{Logical Operators}:
+        \verb+&&, ||, !, etc.+
+    
+      \item \textbf{Assignment Operators}:
+        \verb|=, +=, -=, *=, etc.|
+    
+      \item \textbf{Special Operators}:
+        \verb|new, delete, void, typeof, etc.|
+    \end{enumerate}%}}}
+%}}}
+
+  \subsection{Write a JS program to find the largest of three number.}%{{{
+  \begin{lstlisting}
+  <html>
+    <head>
+      <title>
+        JavaScript program to find out the biggest of given three numbers
+      </title>
+    </head>
+    <body>
+      <table>
+        <tr><td><input type="text" name="a" id="first" placeholder="Enter first number"/></td></tr>
+        <tr><td><input type="text" name="b" id="second" placeholder="Enter second number"/></td></tr>
+        <tr><td><input type="text" name="c" id="third" placeholder="Enter third number"/></td></tr>
+        <tr><td><button onclick = "biggest()">Submit</button> </td> </tr>
+      </table>
+      
+      <div id = "num"></div>
+    
+      <script type="text/javascript">
+      function biggest()
+      {
+        var a,b,c;
+        a = parseInt(document.getElementById ("first").value);
+        b = parseInt(document.getElementById ("second").value);
+        c = parseInt(document.getElementById ("third").value);
+        if(a > b && a > c)
+        {
+          document.getElementById ("num").innerHTML = a+" is the biggest number";
+        }
+        else if(b > c && b > a)
+        {
+          document.getElementById ("num").innerHTML = b+" is the biggest number";
+        }
+        else
+        {
+          document.getElementById ("num").innerHTML = c+"is the biggest number";
+        }
+      }
+      </script>
+    </body>
+  </html>
+  \end{lstlisting}%}}}
+
+  \subsection{Conditional statement in JavaScript}%{{{
+  Conditional statements are used to perform different actions
+  based on different conditions.
+
+  In JS we have the following conditional statements:
+  \begin{itemize}
+    \item Use \texttt{if} to specify a block of code to be 
+      executed, if a specified condition is true
+
+      \textit{syntax}
+      \begin{lstlisting}
+      if (condition) {
+      //  block of code to be executed if the condition is true
+      }
+      \end{lstlisting}
+    \item Use \texttt{else} to specify a block of code to be 
+      executed, if the same condition is false
+
+      \textit{syntax}
+      \begin{lstlisting}
+      if (condition) {
+        //  block of code to be executed if the condition is true
+      } else {
+        //  block of code to be executed if the condition is false
+      }
+      \end{lstlisting}
+    \item Use \texttt{else if} to specify a new condition to test, 
+      if the first condition is false
+
+      \textit{syntax}
+      \begin{lstlisting}
+      if (condition1) {
+        //  block of code to be executed if condition1 is true
+      } else if (condition2) {
+        //  block of code to be executed if the condition1 is false and condition2 is true
+      } else {
+        //  block of code to be executed if the condition1 is false and condition2 is false
+      }
+      \end{lstlisting}
+    \item Use \texttt{switch} to specify many alternative blocks 
+      of code to be executed
+      
+      \textit{syntax}
+      \begin{lstlisting}
+      switch(expression) {
+        case x:
+          // code block
+          break;
+        case y:
+          // code block
+          break;
+        default:
+          // code block
+      }
+      \end{lstlisting}
+  \end{itemize}%}}}
+
+  \subsection{Program: ODDEVEN}%{{{
+  \begin{lstlisting}
+  <html>
+    <body>
+    Enter First Number <input id="n1"><br>
+  
+    <button type = "button" onclick="oddeven()">check</button>
+    <p id="demo"></p>
+    <script language="javascript" type="text/javascript">
+    function oddeven()
+    {
+      var n;
+      n = document.getElementById("n1").value;
+      if(n%2==0)
+        document.getElementById("demo").innerHTML="the no is even";
+      else
+        document.getElementById("demo").innerHTML="the no is even";
+    }
+    </script>
+    </body>
+  </html>
+  \end{lstlisting}%}}}
+
+  \subsection{What are events? How events are handled in JavaScript %{{{
+  explain with example.}
+  JS events are "things" that happen to HTML elements. When JS is 
+  used in HTML pages, JS can "react" on these events.
+
+  \begin{center}
+    \textbf{HTML Events}
+  \end{center}
+  An HTML event can be something the browser does, or something 
+  a user does.
+
+  Here are some examples of HTML events:
+  \begin{itemize}
+    \item An HTML web page has finished loading
+    \item An HTML input field was changed
+    \item An HTML button was clicked
+  \end{itemize}
+  Often, when events happen, you may want to do something.
+  JavaScript lets you execute code when events are detected.
+  HTML allows event handler attributes, with JavaScript code,
+  to be added to HTML elements.
+
+  With single quotes:
+
+  \begin{lstlisting}
+  <element event='some JavaScript'>
+  \end{lstlisting}
+
+  With double quotes:
+
+  \begin{lstlisting}
+  <element event="some JavaScript">
+  \end{lstlisting}
+
+  In the following example, an onclick attribute (with code),
+  is added to a \textless button\textgreater element:
+
+  \begin{lstlisting}
+  <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+  \end{lstlisting}
+
+  \begin{center}
+    \textbf{Common HTML Events}
+  \end{center}
+
+  \begin{center}
+  Here is a list of some common HTML events:
+  \end{center}
+
+  \begin{center}
+  \begin{tabular}{|l|l|}
+  \hline
+
+  \multicolumn{1}{|c|}
+    {\textbf{Event}} & 
+    \multicolumn{1}{c|}
+    {\textbf{Description}}\\ 
+    \hline
+
+  onchange & 
+    An HTML element has been changed\\ 
+    \hline
+
+  onclick &
+    The user clicks an HTML element\\
+    \hline
+
+  onmouseover &
+    The user moves the mouse over an HTML element\\
+    \hline
+
+  onmouseout &
+    The user moves the mouse away from an HTML element \\
+    \hline
+
+  onkeydown &
+    The user pushes a keyboard key\\
+    \hline
+
+  onload &
+    The browser has finished loading the page\\
+    \hline
+
+  \end{tabular}%
+  \end{center}%}}}
+
+  \subsection{Write a JavaScriptprogram to print “Hello World” processing%{{{
+  a button “click me”. Also include a JS function “Say hello”}
+  \begin{lstlisting}
+  <html>
+    <body>
+    <input type="button" name=btn value="Click me" onclick="sayHello()">
+    <script type="text/javascript">
+    function sayHello()
+    {
+      document.write("<h1>" + "Hello World!" + "</h1>");
+    }
+    </script>
+    </body>
+  </html>
+  \end{lstlisting}
+  \begin{lstlisting}
+  ...
+  ...
+  ...
+    <script language="javascript" type="text/javascript">
+    function sayHello()
+    {
+      document.getElementById('p1').innerHTML = "Hello World";
+    }
+    </script>
+    <p id="p1"> </p>
+    </body>
+  </html>
+  \end{lstlisting}%}}}
+
+%}}}
+
+\end{document}

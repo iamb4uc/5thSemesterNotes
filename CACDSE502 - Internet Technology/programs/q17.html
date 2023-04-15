@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+
+
+    Enter the size of the list : <input id="n1"><br>
+    <input type="button" value="Count +,-,0" onclick="avg()">
+    <script type="text/javascript">
+        function counter(ar) {
+            var array1 = [0, 0, 0];
+            for (var i = 0; i < ar.length; i++) {
+                switch (ar[i] < 0) {
+                    case true: array1[0]++;
+                        break;
+                    case false:
+                        if (ar[i] == 0) array1[1]++;
+                        else array1[2]++;
+                        break;
+                    default: break;
+                }
+            } return (array1);
+        }
+        function avg() {
+            var ar1 = [];
+            var n = parseInt(document.getElementById("n1").value);
+            var ar = [];
+            var size = n;
+            for (var a = 0; a < size; a++) {
+
+
+                ar[a] = prompt("Enter the" + (a + 1) + "st elements of an array");
+            }
+            document.write(" Elements are : " + "<br>");
+            for (var j = 0; j < ar.length; j++) {
+                document.write(ar[j] + '<br>')
+            }
+            document.write("______________________________________" + "<br>");
+            ar1 = counter(ar);
+            document.write("No of Negative Elements are : " + ar1[0] + "<br>");
+            document.write("No of Zero  Elements are : " + ar1[1] + "<br>");
+            document.write("No of Positive Elements are : " + ar1[2] + "<br>");
+        } 
+    </script>
+  </body>
+</html>

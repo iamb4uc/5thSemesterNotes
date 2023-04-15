@@ -1,0 +1,88 @@
+\documentclass[11pt, a4paper, oneside]{article}
+
+% {{{ Packages
+        \usepackage[margin=1in]{geometry}                           % Margins
+          \linespread{1.2}                                          % Increases line spacing
+        \usepackage{graphicx}                                       % Image Support
+          \graphicspath{ {./images/} }                              % Path to image directory
+        \usepackage{color}                                          % Colors for stuff
+        \usepackage{soul}                                           % Provides Highlight feature
+        \usepackage{fancyhdr}                                       % Fancy Header and footer
+        \usepackage{amsmath}                                        % Math support
+        \usepackage{amssymb}                                        % Extended symbols for math
+        \usepackage{todonotes}                                        % Extended symbols for math
+        % \usepackage{etoolbox}                                       % IDK what it does. I just coppied it from stackexchage
+        %   \AtBeginEnvironment{align}{\setcounter{equation}{0}}      % resets align counter for each instance
+        \usepackage{listings}                                       % Code-snippet support
+          \definecolor{dkgreen}{rgb}{0,0.6,0}                     % lst-configs
+          \definecolor{gray}{rgb}{0.5,0.5,0.5}
+          \definecolor{mauve}{rgb}{0.58,0,0.82}
+
+          \lstset{                                                % lst-format-config
+            frame=tb,
+            language=HTML,
+            aboveskip=3mm,
+            belowskip=3mm,
+            showstringspaces=false,
+            columns=flexible,
+            basicstyle={\ttfamily},
+            numbers=left,
+            numberstyle=\small\color{gray},
+            keywordstyle=\color{blue},
+            commentstyle=\color{dkgreen},
+            stringstyle=\color{mauve},
+            breaklines=true,
+            breakatwhitespace=true,
+            tabsize=3
+          }
+        \usepackage{caption}                                      % Caption support
+        \usepackage[utf8]{inputenc}                               % utf encoding
+        \usepackage{hyperref}
+          \hypersetup{pdfnewwindow=true, colorlinks=false}
+% }}}
+
+% {{{ Footer section
+        % Creates footer
+        \pagestyle{fancy}%
+        \fancyhf{}%
+        \lfoot{Swapnil}%
+        \cfoot{iamb4uc.xyz}%
+        \rfoot{Page \thepage}%
+        \renewcommand{\headrulewidth}{0pt}% Line at the head invisible
+        \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+
+        % Redefine the plain page style for chapter pages
+        \fancypagestyle{plain}{%
+          \fancyhf{}%
+          \fancyfoot[L]{Swapnil}%
+          \fancyfoot[C]{iamb4uc.xyz}%
+          \fancyfoot[R]{Page \thepage}%
+          \renewcommand{\headrulewidth}{0pt}% Line at the head invisible
+          \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+        }
+% }}}
+
+% Title{{{
+        \title{\Huge{\texttt{Internet Technologies}} \large{college notes}}
+        \author{\huge{by \emph{Swapnil}}\\ \\ \Large{written in {\LaTeX}}}
+        \date{\today}
+%}}}
+
+
+\begin{document}%{{{
+
+%{{{ Title page
+  \maketitle
+  \thispagestyle{empty}
+  % \newpage
+% }}}
+
+%{{{ ToC
+  % \setcounter{tocdepth}{3}
+  % \tableofcontents
+% }}}
+
+\section{Write an HTML page to format a text and format paragraph using stylesheet. (\emph{bold, italics, color, bold})}
+\section{Ajax}
+
+\end{document}%}}}

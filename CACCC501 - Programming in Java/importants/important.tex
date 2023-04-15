@@ -1,0 +1,154 @@
+\documentclass{article}
+\usepackage{fullpage}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\usepackage{color}
+\usepackage{soul}
+
+\usepackage{listings}
+
+\lstset{
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  basicstyle={\small\ttfamily},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{Java Importants}
+\author{Swapnil}
+
+
+\begin{document}
+\maketitle
+{\parindent0pt
+
+\section{Why java ? Explain the features of java.}
+Java is one of the most widely used object-oriented programming language and software platform that was built to run on billions of devices. Java has a major advantage with its portability. Once you have written the code for the Java program on a device, it is very easy to move the code to another
+device without worrying about compatibility issues. It rules and syntax is inspired from C and C++ and its primary goal is to be able to `write one, run anywhere'.
+\ \\
+
+Following are the features of Java:
+\begin{enumerate}
+  \item \textbf{Platform Independent}
+
+    Java is not compiled for platform specific machine, rather for platform-independent byte-code. This byte-code is distributed over the web and interpreted by the Java Virtual Machine (JVM) on whichever platform it is being run on.
+
+  \item \textbf{Object-oriented}
+
+    Java can be easily extended since it is based on the Object model.
+
+  \item \textbf{Multithreaded}
+
+    With Java's multithreaded feature it is possible to write programs that can perform many tasks simultaneously. This design feature allows the developers to construct interactive applications that can run smoothly.
+
+  \item \textbf{Robust}
+
+    Java makes an effort to eliminate error-prone situations by emphasizing mainly on compile time error checking and runtime checking.
+
+  \item \textbf{Distributed}
+
+    Java is designed for the distributed environment of the internet.
+\end{enumerate}
+
+\section{What is byte code?}
+Byte-codes are nothing but a platform independent executable file that provides machine instructions for a Java Processor chip called Java Virtual Machine.
+
+\section{What is JVM?}
+Programs written in Java are compiled into Java byte-code which is then interpreted by a special Java interpreter for a specific platform. Actually this Java interpreter is known as the Java Virtual Machine (JVM). This machine is called Byte-code. Actually the Java interpreter running on any
+machine appears and behaves like a virtual processor chip, that is why -- Java Virtual Machine.
+\section{What is JDK?}
+The Java development kit comes with the collection of tools that are used for developing and running Java Programs. They include:
+
+\begin{enumerate}
+  \item Appletviewer
+  \item Java C (Java Compiler)
+  \item Java (Java interpreter)
+  \item Java D (Java Disassembler)
+  \item Java h (for C header files)
+  \item Java doc (for creating HTML documents)
+  \item Jdb (Java debugger)
+\end{enumerate}
+
+\section{How arrays are declared and initialized in Java (1D, 2D). Give example.}
+\begin{lstlisting}
+/* 1D array */
+import java.util.*;
+
+public class oneDarray {
+  public static void main(String[] args) {
+    int a[], i, n;
+    Scanner in = new Scanner(System.in);
+    try {
+      System.out.println("Enter how many number");
+      n=in.nextInt();
+      System.out.println("Enter array elements ");
+      a=new int[n];
+      for (i=0; i<n; i++)
+          a[i]=in.nextInt();
+      System.out.println("Tje array elements are: ");
+      for (i=0; i<n; i++)
+          System.out.print(a[i]+" ");
+      } catch(Exception e) {
+    }
+  }
+}
+
+
+/* 2D array */
+import java.util.*;
+
+public class twoDarray {
+    public static void main(String[] args) {
+        int a[][], r, c, i, j;
+        Scanner in = new Scanner(System.in);
+        try
+        {
+          System.out.println("Enter row and column for 2D array");
+          r=in.nextInt();
+          c=in.nextInt();
+          System.out.println("Enter 2D elements");
+          a=new int[r][c];
+          for(i=0; i<r; i++)
+            for(j=0; j<c; j++)
+              a[i][j]=in.nextInt();
+          System.out.println("2D elements are: ");
+          for(i=0; i<r; i++)
+          {
+            for(j=0; j<c; j++)
+              System.out.print(a[i][j]+" ");
+            System.out.println();
+          }
+          System.out.println("The row lenght of 2D array is"+a.length);
+          System.out.println("The row lenght of 2D array is"+a[0].length);
+        } catch(Exception e) {}
+  }
+}
+\end{lstlisting}
+
+\section{Find the sum of any number of integers entered as command line arguments.}
+\begin{lstlisting}
+package csjava;
+
+public class cmdArg {
+  public static void main(String[] args) {
+    int cnt, i=0, n, s=0;
+    cnt=args.length;
+    while(i<cnt) {
+      n=Integer.parseInt(args[i]);
+      s=s+n;
+      i++;
+
+    }
+    System.out.println("The sum of integer is "+s);
+  }
+}
+\end{lstlisting}
+
+}
+\end{document}

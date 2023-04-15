@@ -1,0 +1,38 @@
+<student>
+	<name>
+		<s_name>Masuk</s_name>
+		<s_name>Moinak</s_name>
+		<s_name>Swapnil</s_name>
+		<s_name>Srijani</s_name>
+	</name>
+	<roll>
+		<s_roll>1001</s_roll>
+		<s_roll>1002</s_roll>
+		<s_roll>1003</s_roll>
+		<s_roll>1004</s_roll>
+	</roll>
+	<contact>
+		<c_no>99000000</c_no>
+		<c_no>95555000</c_no>
+		<c_no>96500000</c_no>
+		<c_no>94500000</c_no>
+	</contact>
+	<dob>
+		<birth>10-05-2000</birth>
+		<birth>23-03-2001</birth>
+		<birth>13-09-2002</birth>
+		<birth>23-06-2002</birth>
+	</dob>
+	<dep>
+		<dep_n>Computer Application</dep_n>
+		<dep_n>Computer Application</dep_n>
+		<dep_n>Computer Application</dep_n>
+		<dep_n>Computer Application</dep_n>
+	</dep>
+	<yrs>
+		<y_n>2023</y_n>
+		<y_n>2023</y_n>
+		<y_n>2023</y_n>
+		<y_n>2023</y_n>
+	</yrs>
+</student>
